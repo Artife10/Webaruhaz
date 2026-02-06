@@ -1,0 +1,28 @@
+body {
+    margin: 0;
+    min-height: 100vh;
+    background: radial-gradient(
+    circle at top,
+    #1f4d38 0%,
+    #0b1f17 60%,
+    #06130e 100%
+    );
+    font-family: system-ui, sans-serif;
+    }
+
+.navbar{
+    min-width: max-content;
+    background-color: #0b1f17;
+    color: #fff;
+    display: flex;
+}
+.icons button{
+    border-radius: 300px;
+    background: #27382E;
+    width: 60px;
+    height: 60px;
+
+}
+.incons img{
+    width: 50px;
+}
