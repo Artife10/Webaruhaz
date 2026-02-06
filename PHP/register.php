@@ -13,7 +13,7 @@
             <form action="">
                 <input type="text" name="nev" id="nev" placeholder="Name"><br><br>
                 <input type="password" name="password" id="password" placeholder="Password"><br>
-                <button>Register</button>
+                <button><a href="explore.php">Register</a></button>
             </form>
         </div>
     </div>

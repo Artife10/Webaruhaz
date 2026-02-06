@@ -9,20 +9,66 @@ body {
     );
     font-family: system-ui, sans-serif;
     }
-
 .navbar{
     min-width: max-content;
     background-color: #0b1f17;
     color: #fff;
     display: flex;
+    padding: 15px;
+}
+.title{
+    display: flex;
+    width: 70%;
+}
+.icons{
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    width: 30%;
 }
 .icons button{
     border-radius: 300px;
     background: #27382E;
     width: 60px;
     height: 60px;
-
+    border: 0;
+    margin-left: 10px;
+    margin-right: 10px;
 }
-.incons img{
-    width: 50px;
+.icons button:active{
+    scale: 0.98;
+}
+.menu{
+    position: fixed;
+    bottom: 0;
+    min-width: 100%;
+    display: flex;
+    background: #143124;
+    height: 80px;
+    justify-content: center;
+    align-items: center;
+    gap: 50px;
+}
+.searchbar input{
+    width: 80%;
+    height: 40px;
+    background: #313a34;
+    border: 1px solid rgba(255,255,255,0.2);
+    padding: 14px;
+    color: #e5f3ec;
+    border-radius: 15px;
+    margin: 30px;
+}
+.searchbar{
+    min-width: max-content;
+    display: flex;
+}
+.searchbar-left{
+    display: flex;
+    width: 80%;
+}
+.searchbar-right{
+    width: 20%;
+    display: flex;
+    justify-content: flex-end;
 }

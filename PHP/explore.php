@@ -16,5 +16,18 @@
             <button><img src="../ASSETS/filter.png" alt="" width="30px";></button>
         </div>
     </div>
+    <div class="searchbar">
+        <div class="search-left">
+
+        </div>
+        <div class="searchbar-right">
+            <button><img src="../ASSETS/filter.png" alt="" width="30px";></button>
+        </div>
+    </div>
+    <div class="menu">
+       <img src="../ASSETS/bell.png" width="40px" height="40px"> 
+       <img src="../ASSETS/filter.png" width="40px" height="40px"> 
+       <img src="../ASSETS/bell.png" width="40px" height="40px"> 
+    </div>
 </body>
 </html>

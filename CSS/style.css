@@ -93,3 +93,7 @@ font-family: system-ui, sans-serif;
 .registerr a{
     color: black;
 }
+#registbutton{
+    animation: startblur 0.3s;
+    
+}
