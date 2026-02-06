@@ -11,8 +11,8 @@
         <div class="register">
             <h1>Register</h1>
             <form action="">
-                <input type="text" name="nev" id="nev" placeholder="name"><br><br>
-                <input type="password" name="password" id="password" placeholder="password"><br>
+                <input type="text" name="nev" id="nev" placeholder="Name"><br><br>
+                <input type="password" name="password" id="password" placeholder="Password"><br>
                 <button>Register</button>
             </form>
         </div>
