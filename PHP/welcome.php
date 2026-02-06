@@ -11,8 +11,9 @@
         <img src="../ASSETS/welcome-pic.jpg" width="300px">
         <table>
             <tr>
-                <th><img src="" alt=""></th>
+                <th><img src="../ASSETS/trade.png" alt="" width="50px"></th>
                 <th><h1>Tradely</h1></th>
+                <p>Join the community of smart <br> buy and sell used goods <br> with ease.</p>
             </tr>
         </table>
     </div>
