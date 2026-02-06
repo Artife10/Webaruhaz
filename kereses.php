@@ -1,19 +1,27 @@
-<html> 
-<body>
-
-<form action "kereses.php" method="GET">
-<input id "search" type="text" placeholder="Type here">
-<input id="submit" type="submit" value="Search">
-</form>
-</body>
-</html>
-
 <?php
 
-$connection = mysql_connect("localhost", "root", "");
+$connection = mysqli_connect("localhost", "root", "", "blog1");
 
-mysql_select_db("blog1") or die (mysql_error());
 
-$safe_value = mysql_real_escape_string($_POST['search']);
+if (!$connection) {
+    die("Kapcsolódási hiba: " . mysqli_connect_error());
+}
 
-$result
+
+if (isset($_GET['search'])) {
+    $safe_value = mysqli_real_escape_string($connection, $_GET['search']);
+
+    
+    $sql = "SELECT * FROM posts WHERE title LIKE '%$safe_value%'";
+    $result = mysqli_query($connection, $sql);
+
+    if ($result) {
+        while ($row = mysqli_fetch_assoc($result)) {
+            echo "<p>" . htmlspecialchars($row['title']) . "</p>";
+        }
+    } else {
+        echo "Hiba a lekérdezésben: " . mysqli_error($connection);
+    }
+}
+?>
+
