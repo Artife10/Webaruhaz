@@ -13,6 +13,7 @@ font-family: system-ui, sans-serif;
     border-radius: 30px;
 }
 .card{
+    min-height: 100vh;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -24,6 +25,7 @@ font-family: system-ui, sans-serif;
 .card p{
     color: #D0DAE6;
 }
+<<<<<<< HEAD
 
 .register{
     border-radius: 30px;
@@ -42,4 +44,22 @@ font-family: system-ui, sans-serif;
     font-size: large;
     width: 60%;
     height: 50px;
+=======
+.card button{
+    background: #2BEE79;
+    height: 45px;
+    width: 300px;
+    border: 0;
+    border-radius: 12px;
+    margin: 10px;
+}
+#grey{
+   background: #1B3424;
+    border: 1px solid rgba(255,255,255,0.2);
+    padding: 14px;
+    color: #e5f3ec;
+}
+.card button:active{
+    scale: -0.98;
+>>>>>>> 34a458cbb398690a8ded19c4cd3814d482144b8a
 }
