@@ -19,4 +19,8 @@ font-family: system-ui, sans-serif;
     align-content: center;
     flex-direction: column;
     color: #fff;
+    text-align: center;
+}
+.card p{
+    color: #D0DAE6;
 }
