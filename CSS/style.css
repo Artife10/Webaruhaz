@@ -24,3 +24,22 @@ font-family: system-ui, sans-serif;
 .card p{
     color: #D0DAE6;
 }
+
+.register{
+    border-radius: 30px;
+    position: absolute;
+    top: 25%;
+    bottom: 25%;
+    left: 35%;
+    right: 35%;
+    background-color: rgb(61, 55, 71);
+    align-items: center;
+    align-content: center;
+    justify-content: center;
+}
+
+.register input{
+    font-size: large;
+    width: 60%;
+    height: 50px;
+}
