@@ -84,3 +84,12 @@ font-family: system-ui, sans-serif;
     border-color: white;
     border-width: 1px;
 }
+
+.card a{
+    color: #e5f3ec;
+    text-decoration: none;
+}
+
+.registerr a{
+    color: black;
+}

@@ -17,7 +17,7 @@
         </table>
         <p>Join the community of smart <br> buy and sell used goods <br> with ease.</p>
         
-        <button class="registerr"><a href="../PHP/register.php"><b>Get started</b></a></button>
+        <a href="../PHP/register.php"><button class="registerr"><b>Get started</b></button></a>
         <button id="grey"><a href="../PHP/register.php"><b>Login</b></a></button>
 </body>
 </html>
