@@ -25,7 +25,6 @@ font-family: system-ui, sans-serif;
 .card p{
     color: #D0DAE6;
 }
-<<<<<<< HEAD
 
 .register{
     border-radius: 30px;
@@ -44,7 +43,7 @@ font-family: system-ui, sans-serif;
     font-size: large;
     width: 60%;
     height: 50px;
-=======
+}
 .card button{
     background: #2BEE79;
     height: 45px;
@@ -61,7 +60,7 @@ font-family: system-ui, sans-serif;
     color: #e5f3ec;
 }
 .card button:active{
-<<<<<<< HEAD
+
     scale: 0.98;
 }
 .card a{
@@ -71,8 +70,3 @@ font-family: system-ui, sans-serif;
 .register a{
     color: black;
 }
-=======
-    scale: -0.98;
->>>>>>> 34a458cbb398690a8ded19c4cd3814d482144b8a
-}
->>>>>>> 4af05894569b0b084ee1689e1cfabba46fea3e35
