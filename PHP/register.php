@@ -10,8 +10,7 @@
     <div class="card">
         <div class="register">
             <h1>Register</h1>
-            <form action="register_
-            validate.php" method="post">
+            <form action="register_validate.php" method="post">
                 <input type="text" name="nev" id="nev" placeholder="Name"><br><br>
                 <input type="password" name="password" id="password" placeholder="Password"><br>
                 <button>Register</button>

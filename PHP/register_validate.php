@@ -19,7 +19,7 @@ else {
         header('Location: '."register.php");
       }
       else {
-        $sql = "INSERT INTO `users`(`nev`, `password`) VALUES ('%$nev%','%$passw%')";
+        $sql = "INSERT INTO `users`(`nev`, `password`) VALUES ('$nev','$passw')";
         $result = mysqli_query($connection, $sql);
         header('Location: '."explore.php");
       }
