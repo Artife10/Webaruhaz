@@ -10,12 +10,11 @@ else {
     $nev = $_POST["nev"];
     $passw = $_POST["password"];
 
-    $sql = "SELECT * FROM `users` WHERE `nev` LIKE '%$nev%' AND `password` LIKE '%$passw%'";
+    $sql = "SELECT * FROM `users` WHERE `nev` LIKE '%$nev%'";
     $result = mysqli_query($connection, $sql);
 
     if ($result && $nev != "" && $passw != "") {
       if ($result->num_rows > 0) {
-        echo "<script>alert('Already exists');</script>"; 
         header('Location: '."register.php");
       }
       else {
