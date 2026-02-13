@@ -10,10 +10,10 @@
     <div class="card">
         <div class="register">
             <h1>Register</h1>
-            <form action="">
+            <form action="validate.php" method="post">
                 <input type="text" name="nev" id="nev" placeholder="Name"><br><br>
                 <input type="password" name="password" id="password" placeholder="Password"><br>
-                <button><a href="explore.php">Register</a></button>
+                <button>Register</button>
             </form>
         </div>
     </div>

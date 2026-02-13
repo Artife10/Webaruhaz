@@ -38,13 +38,8 @@ font-family: system-ui, sans-serif;
     align-content: center;
     justify-content: center;
     filter: blur(0px);
-    animation: startblur 0.3s;
 }
 
-@keyframes startblur {
-  from {filter: blur(20px);}
-  to {filter: blur(0px);}
-}
 
 .register input{
     font-size: large;
