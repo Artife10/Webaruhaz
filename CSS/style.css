@@ -26,27 +26,6 @@ font-family: system-ui, sans-serif;
     color: #D0DAE6;
 }
 
-.register{
-    border-radius: 30px;
-    position: absolute;
-    top: 25%;
-    bottom: 25%;
-    left: 35%;
-    right: 35%;
-    background-color: rgba(61, 55, 71, 0.5);
-    align-items: center;
-    align-content: center;
-    justify-content: center;
-    filter: blur(0px);
-}
-
-
-.register input{
-    font-size: large;
-    width: 60%;
-    height: 50px;
-}
-
 .register h1{
     font-size: 32pt;
 }
@@ -91,4 +70,55 @@ font-family: system-ui, sans-serif;
 #registbutton{
     animation: startblur 0.3s;
     
+}
+
+.register{
+    font-size: larger;
+}
+.register input{
+        padding: 10px;
+}
+
+@media only screen and (max-width: 1000px) {
+  .register{
+    border-radius: 30px;
+    position: absolute;
+    top: 25%;
+    bottom: 25%;
+    left: 10%;
+    right: 10%;
+    background-color: rgba(61, 55, 71, 0.5);
+    align-items: center;
+    align-content: center;
+    justify-content: center;
+    filter: blur(0px);
+    }
+    
+}
+
+@media only screen and (min-width: 1000px) {
+  .register{
+    border-radius: 30px;
+    position: absolute;
+    top: 25%;
+    bottom: 25%;
+    left: 30%;
+    right: 30%;
+    background-color: rgba(61, 55, 71, 0.5);
+    align-items: center;
+    align-content: center;
+    justify-content: center;
+    filter: blur(0px);
+    }
+}
+
+
+
+.register input{
+    font-size: large;
+    width: 60%;
+    height: 50px;
+}
+.register button{
+    width: 60%;
 }
