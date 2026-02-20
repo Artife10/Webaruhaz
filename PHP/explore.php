@@ -16,16 +16,14 @@
             <button><img src="../ASSETS/filter.png" alt="" width="30px";></button>
         </div>
     </div>
-   <table class="searchbar">
-    <tr>
-        <th id="input">
-            <input type="text" placeholder="Irjad more">
-        </th>
-        <th  id="button-search">
-            <img src="../ASSETS/bell.png" width="40px" height="40px">
-        </th>
-    </tr>
-   </table>
+   <div class="searchbar">
+    <div class="searchbar-left">
+        <input type="text" placeholder="Irjad more">
+    </div>
+    <div class="searchbar-right">
+       <button><img src="../ASSETS/bell.png" width="40px" height="40px"</button> 
+    </div>
+   </div>
     <!-- ALSO VALAMI NAVBAR FOOTER-->
     <div class="menu">
        <img src="../ASSETS/bell.png" width="40px" height="40px"> 
