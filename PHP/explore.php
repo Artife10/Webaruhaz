@@ -68,7 +68,7 @@ if (isset($_GET['kereses'])) {
     <div class="menu">
         <button><img src="../ASSETS/search.png" width="40px" height="40px" alt="Keresés"></button>
         <button><img src="../ASSETS/explore.png" width="40px" height="40px" alt="Felfedezés"></button>
-        <button><img src="../ASSETS/profile.png" width="40px" height="40px" alt="Profil"></button>
+        <a href="../PHP/profile.php"><button><img src="../ASSETS/profile.png" width="40px" height="40px" alt="Profil"></button></a>
     </div>
 </body>
 </html>
