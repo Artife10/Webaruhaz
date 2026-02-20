@@ -16,7 +16,6 @@
             <button><img src="../ASSETS/filter.png" alt="" width="30px";></button>
         </div>
     </div>
-<<<<<<< Updated upstream
    <div class="searchbar">
     <div class="searchbar-left">
         <input type="text" placeholder="Irjad more">
@@ -25,7 +24,6 @@
        <button><img src="../ASSETS/bell.png" width="40px" height="40px"</button> 
     </div>
    </div>
-=======
    <table class="searchbar">
     <tr>
         <th id="input">
@@ -70,7 +68,6 @@
 ?>
         </table>
     </div>
->>>>>>> Stashed changes
     <!-- ALSO VALAMI NAVBAR FOOTER-->
     <div class="menu">
        <img src="../ASSETS/bell.png" width="40px" height="40px">
