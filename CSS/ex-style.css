@@ -88,15 +88,16 @@ body {
     justify-content: center;
     width: 8%;
 }
-#id{
-   width: 500px;
+.menu button{
+    border-radius: 300px;
+    background: rgba(0, 179, 75, 0);
+    width: 60px;
+    height: 60px;
+    border: 0;
+    margin-left: 10px;
+    margin-right: 10px;
 }
-
-.grid td{
-    background-color: #0b1f17;
-    color: white;
-    width: 500px;
+.menu button:active{
+    scale: 0.98;
+    background: rgba(0, 179, 75, 0.11);
 }
-
-.grid img{
-    width: 100px;

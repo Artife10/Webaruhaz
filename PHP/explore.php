@@ -24,19 +24,17 @@
             <button type="submit"><img src="../ASSETS/bell.png" width="40px"></button> 
         </div>
     </div>
-</form>
 
-   
-   <table class="searchbar">
-    <tr>
-        <th id="input">
-            <input type="text" placeholder="Irjad more">
-        </th>
-        <th  id="button-search">
-            <img src="../ASSETS/bell.png" width="40px" height="40px">
-        </th>
-    </tr>
-   </table>
+
+   <div class="searchbar">
+    <div class="searchbar-left">
+        <input type="text" placeholder="Irjad more">
+    </div>
+    <div class="searchbar-right">
+       <button><img src="../ASSETS/search.png" width="30px" height="30px"</button> 
+    </div>
+   </div>
+
     <div class="grid">
         <table>
                <?php
@@ -83,9 +81,9 @@ if (mysqli_num_rows($result) > 0) {
     </div>
     <!-- ALSO VALAMI NAVBAR FOOTER-->
     <div class="menu">
-       <img src="../ASSETS/bell.png" width="40px" height="40px">
-       <img src="../ASSETS/filter.png" width="40px" height="40px"> 
-       <img src="../ASSETS/bell.png" width="40px" height="40px"> 
+        <button><img src="../ASSETS/search.png" width="40px" height="40px" alt="Keresés"></button>
+        <button><img src="../ASSETS/explore.png" width="40px" height="40px" alt="Felfedezés"></button>
+        <button><img src="../ASSETS/profile.png" width="40px" height="40px" alt="Profil"></button>
     </div>
 </body>
 </html>
