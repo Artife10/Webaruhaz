@@ -24,16 +24,6 @@
        <button><img src="../ASSETS/search.png" width="30px" height="30px"</button> 
     </div>
    </div>
-   <table class="searchbar">
-    <tr>
-        <th id="input">
-            <input type="text" placeholder="Irjad more">
-        </th>
-        <th  id="button-search">
-            <img src="../ASSETS/bell.png" width="40px" height="40px">
-        </th>
-    </tr>
-   </table>
     <div class="grid">
         <table>
                 <?php
