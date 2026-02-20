@@ -18,11 +18,11 @@ else {
         header('Location: '."explore.php");
       }
       else {
-        header('Location: '."register.php");
+        header('Location: '."login.php");
       }
     }
     else {
-        header('Location: '."register.php");
+        header('Location: '."login.php");
     }
 }
 

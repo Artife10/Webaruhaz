@@ -111,13 +111,6 @@ ALTER TABLE `users`
 -- Megkötések a kiírt táblákhoz
 --
 
---
--- Megkötések a táblához `termek`
---
-ALTER TABLE `termek`
-  ADD CONSTRAINT `termek_ibfk_1` FOREIGN KEY (`userid`) REFERENCES `users` (`userid`),
-  ADD CONSTRAINT `termek_ibfk_2` FOREIGN KEY (`katid`) REFERENCES `kategoria` (`katid`);
-COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
