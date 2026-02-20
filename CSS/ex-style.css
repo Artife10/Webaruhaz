@@ -50,7 +50,6 @@ body {
     gap: 50px;
 }
 .searchbar input{
-    width: 80%;
     height: 40px;
     background: #313a34;
     border: 1px solid rgba(255,255,255,0.2);
@@ -58,17 +57,22 @@ body {
     color: #e5f3ec;
     border-radius: 15px;
     margin: 30px;
+    width: 800px;
 }
 .searchbar{
-    min-width: max-content;
     display: flex;
+    justify-content: space-between;
+    min-width: max-content;
 }
 .searchbar-left{
     display: flex;
-    width: 80%;
+    width: 1000px;
 }
 .searchbar-right{
-    width: 20%;
     display: flex;
-    justify-content: flex-end;
+    width: 20%;
+    float: right;
+}
+#id{
+   width: 500px;
 }
