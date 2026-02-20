@@ -16,6 +16,7 @@
             <button><img src="../ASSETS/filter.png" alt="" width="30px";></button>
         </div>
     </div>
+<<<<<<< Updated upstream
    <div class="searchbar">
     <div class="searchbar-left">
         <input type="text" placeholder="Irjad more">
@@ -24,9 +25,55 @@
        <button><img src="../ASSETS/bell.png" width="40px" height="40px"</button> 
     </div>
    </div>
+=======
+   <table class="searchbar">
+    <tr>
+        <th id="input">
+            <input type="text" placeholder="Irjad more">
+        </th>
+        <th  id="button-search">
+            <img src="../ASSETS/bell.png" width="40px" height="40px">
+        </th>
+    </tr>
+   </table>
+    <div class="grid">
+        <table>
+                <?php
+
+                        $connection = mysqli_connect("localhost", "root", "", "tradely");
+
+
+                        if (!$connection) {
+                            die("Kapcsolódási hiba: " . mysqli_connect_error());
+                        }
+                        else {
+                            $sql = "SELECT * FROM `termek` WHERE 1";
+                            $result = mysqli_query($connection, $sql);
+                            $i = 0;
+                            echo "<tr>";
+                            while($infoItems = $result->fetch_array()){
+                                if ($i % 4 == 0) {
+                                    echo"</tr><tr>";
+                                }
+                                $i++;
+                            echo    "
+                                        <td>
+                                            <td> <img src=".$infoItems['kep'].">".$infoItems['termeknev'].$infoItems['leiras']."</td>
+                                        </td>
+                            ";
+
+            }
+            echo "</tr>";
+                        }
+
+    
+?>
+        </table>
+    </div>
+>>>>>>> Stashed changes
     <!-- ALSO VALAMI NAVBAR FOOTER-->
     <div class="menu">
-       <img src="../ASSETS/bell.png" width="40px" height="40px"> 
+       <img src="../ASSETS/bell.png" width="40px" height="40px">
        <img src="../ASSETS/filter.png" width="40px" height="40px"> 
        <img src="../ASSETS/bell.png" width="40px" height="40px"> 
     </div>

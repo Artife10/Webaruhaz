@@ -88,3 +88,19 @@ body {
     justify-content: center;
     width: 8%;
 }
+<<<<<<< Updated upstream
+=======
+#id{
+   width: 500px;
+}
+
+.grid td{
+    background-color: #0b1f17;
+    color: white;
+    width: 500px;
+}
+
+.grid img{
+    width: 100px;
+}
+>>>>>>> Stashed changes
