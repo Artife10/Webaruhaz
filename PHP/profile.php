@@ -20,6 +20,12 @@
         <hr>
         
      </div>
+     <!-- ALSO VALAMI NAVBAR FOOTER-->
+    <div class="menu">
+        <a href="../PHP/sell.php"><button><img src="../ASSETS/search.png" width="40px" height="40px" alt="Keresés"></button></a>
+        <a href="../PHP/explore.php"><button><img src="../ASSETS/explore.png" width="40px" height="40px" alt="Felfedezés"></button></a>
+        <button><img src="../ASSETS/profile.png" width="40px" height="40px" alt="Profil"></button>
+    </div>
         
 </body>
 </html>
