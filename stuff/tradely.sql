@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Gép: 127.0.0.1
--- Létrehozás ideje: 2026. Feb 06. 08:42
+-- Létrehozás ideje: 2026. Feb 20. 08:31
 -- Kiszolgáló verziója: 10.4.28-MariaDB
 -- PHP verzió: 8.2.4
 
@@ -32,6 +32,17 @@ CREATE TABLE `kategoria` (
   `katnev` varchar(255) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
+--
+-- A tábla adatainak kiíratása `kategoria`
+--
+
+INSERT INTO `kategoria` (`katid`, `katnev`) VALUES
+(1, 'Elektronika'),
+(2, 'Ruházat'),
+(3, 'Otthon és Kert'),
+(4, 'Sport'),
+(5, 'Játékok');
+
 -- --------------------------------------------------------
 
 --
@@ -49,6 +60,17 @@ CREATE TABLE `termek` (
   `kep` varchar(255) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
+--
+-- A tábla adatainak kiíratása `termek`
+--
+
+INSERT INTO `termek` (`termekid`, `userid`, `katid`, `termeknev`, `leiras`, `hely`, `ar`, `kep`) VALUES
+(1, 1, 1, 'iPhone 13 Pro', 'Megkímélt állapotban, 128GB, kék színben.', 'Budapest', 220000, 'iphone13.jpg'),
+(2, 1, 3, 'IKEA íróasztal', 'Fehér színű, karcmentes állapotú asztal.', 'Budapest', 15000, 'asztal.jpg'),
+(3, 2, 2, 'Vintage bőrdzseki', 'Eredeti marhabőr, M-es méret.', 'Debrecen', 25000, 'dzseki.png'),
+(4, 3, 4, 'MTB Kerékpár', '29 colos kerekek, Shimano váltóval.', 'Szeged', 110000, 'bringa.jpg'),
+(5, 2, 5, 'LEGO Star Wars', 'Millennium Falcon készlet, bontatlan.', 'Debrecen', 45000, 'lego.jpg');
+
 -- --------------------------------------------------------
 
 --
@@ -60,6 +82,15 @@ CREATE TABLE `users` (
   `nev` varchar(255) NOT NULL,
   `password` varchar(64) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+--
+-- A tábla adatainak kiíratása `users`
+--
+
+INSERT INTO `users` (`userid`, `nev`, `password`) VALUES
+(1, 'Kovács János', 'jelszo123'),
+(2, 'Nagy Anna', 'anna2024'),
+(3, 'Szabó Péter', 'titkos99');
 
 --
 -- Indexek a kiírt táblákhoz
@@ -93,24 +124,20 @@ ALTER TABLE `users`
 -- AUTO_INCREMENT a táblához `kategoria`
 --
 ALTER TABLE `kategoria`
-  MODIFY `katid` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `katid` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
 
 --
 -- AUTO_INCREMENT a táblához `termek`
 --
 ALTER TABLE `termek`
-  MODIFY `termekid` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `termekid` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
 
 --
 -- AUTO_INCREMENT a táblához `users`
 --
 ALTER TABLE `users`
-  MODIFY `userid` int(11) NOT NULL AUTO_INCREMENT;
-
---
--- Megkötések a kiírt táblákhoz
---
-
+  MODIFY `userid` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
