@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Gép: 127.0.0.1
--- Létrehozás ideje: 2026. Feb 20. 11:07
+-- Létrehozás ideje: 2026. Feb 20. 11:23
 -- Kiszolgáló verziója: 10.4.28-MariaDB
 -- PHP verzió: 8.2.4
 
@@ -78,7 +78,8 @@ INSERT INTO `termek` (`termekid`, `userid`, `katid`, `termeknev`, `leiras`, `hel
 (0, 2, 5, 'Társasjáték Csomag', 'Catan és Dixit, újszerű állapotban.', 'Székesfehérvár', 15000, 'https://okosjatek.cdn.shoprenter.hu/custom/okosjatek/image/cache/w900h900wt1q85/product/Szandi/g%C3%A9mklub/dixit/dixit-tarsasjatek.jpg.webp?lastmod=1720423508.1685028474'),
 (0, 3, 3, 'Állólámpa', 'Modern, szabályozható fényerővel.', 'Veszprém', 18000, 'https://encrypted-tbn0.gstatic.com/shopping?q=tbn:ANd9GcShsodIz-Phx6J9wJRoXigO713oV29oztDqiMMiLK02LgFCVJ7FcrDsm_eaqI_BvKC5Af7TNKdo5pZ7MsiWsJRQlGPKncJv_0l_-PCHILg_tSWWBGylGqRa'),
 (0, 1, 4, 'Súlyzó készlet', '2x10 kg, öntöttvas tárcsákkal.', 'Budapest', 25000, 'https://s8.badu.bg/photos/886687/400x400_657b07de29ebc.jpg'),
-(0, 2, 2, 'Nike Futócipő', 'Air Zoom, 42-es méret, neon zöld.', 'Pécs', 28500, 'https://www.futanet.hu/img/up/pic_15004.jpg');
+(0, 2, 2, 'Nike Futócipő', 'Air Zoom, 42-es méret, neon zöld.', 'Pécs', 28500, 'https://www.futanet.hu/img/up/pic_15004.jpg'),
+(0, 0, 2, 'Tükör (nagy)', 'Hatalmas tükör eladó csak kp vagy tesco kupon', 'Cserkeszőlő', 12000, 'https://kep.index.hu/1/0/4266/42667/426677/42667714_fd64f7b5a83c91e219855de9a40aca08_wm.jpg');
 
 -- --------------------------------------------------------
 
