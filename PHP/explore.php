@@ -15,7 +15,17 @@
             <button><img src="../ASSETS/bell.png" alt="" width= "30px";></button>
             <button><img src="../ASSETS/filter.png" alt="" width="30px";></button>
         </div>
+    </div><form method="GET" action="">
+    <div class="searchbar">
+        <div class="searchbar-left">
+            <input type="text" name="kereses" placeholder="Mit keresel cigany">
+        </div>
+        <div class="searchbar-right">
+            <button type="submit"><img src="../ASSETS/bell.png" width="40px"></button> 
+        </div>
     </div>
+
+
    <div class="searchbar">
     <div class="searchbar-left">
         <input type="text" placeholder="Irjad more">
@@ -24,12 +34,21 @@
        <button><img src="../ASSETS/search.png" width="30px" height="30px"</button> 
     </div>
    </div>
+
     <div class="grid">
         <table>
-                <?php
+               <?php
+    $connection = mysqli_connect("localhost", "root", "", "tradely");
 
-                        $connection = mysqli_connect("localhost", "root", "", "tradely");
+    if (!$connection) {
+    die("Kapcsolódási hiba: " . mysqli_connect_error());
+}
 
+// Ellenőrizzük, jött-e keresési kifejezés
+    $keresett = "";
+if (isset($_GET['kereses'])) {
+    $keresett = mysqli_real_escape_string($connection, $_GET['kereses']);
+}
 
                         if (!$connection) {
                             die("Kapcsolódási hiba: " . mysqli_connect_error());
@@ -47,13 +66,30 @@
                             echo    "
                                         <td> <div class='gridhead'><img src=".$infoItems['kep']." alt='a fityfenét nem töltött be'> </div><div class='gridbody'><h1>".$infoItems['termeknev']."</h1><p>".$infoItems['leiras']."</p><button class='buy'>BUY</button></div></td>
                             ";
-
-            }
-            echo "</tr>";
+                            }
                         }
+// Alapból mindent mutat, ha nincs keresés, egyébként szűr a termék nevére
+$sql = "SELECT * FROM `termek` WHERE `termeknev` LIKE '%$keresett%'";
+$result = mysqli_query($connection, $sql);
 
-    
+if (mysqli_num_rows($result) > 0) {
+    $i = 0;
+    echo "<tr>";
+    while ($infoItems = $result->fetch_array()) {
+        if ($i % 4 == 0 && $i != 0) {
+            echo "</tr><tr>";
+        }
+        echo "<td>
+                <img src='".$infoItems['kep']."' width='150px'><br>
+                <strong>".$infoItems['termeknev']."</strong><br>
+                ".$infoItems['leiras']."
+              </td>";
+        $i++;
+    }
+}
+    echo "</tr>";
 ?>
+
         </table>
     </div>
     <!-- ALSO VALAMI NAVBAR FOOTER-->
