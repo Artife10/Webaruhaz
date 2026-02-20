@@ -64,12 +64,12 @@ CREATE TABLE `termek` (
 -- A tábla adatainak kiíratása `termek`
 --
 
-INSERT INTO `termek` (`termekid`, `userid`, `katid`, `termeknev`, `leiras`, `hely`, `ar`, `kep`) VALUES
-(1, 1, 1, 'iPhone 13 Pro', 'Megkímélt állapotban, 128GB, kék színben.', 'Budapest', 220000, 'iphone13.jpg'),
-(2, 1, 3, 'IKEA íróasztal', 'Fehér színű, karcmentes állapotú asztal.', 'Budapest', 15000, 'asztal.jpg'),
-(3, 2, 2, 'Vintage bőrdzseki', 'Eredeti marhabőr, M-es méret.', 'Debrecen', 25000, 'dzseki.png'),
-(4, 3, 4, 'MTB Kerékpár', '29 colos kerekek, Shimano váltóval.', 'Szeged', 110000, 'bringa.jpg'),
-(5, 2, 5, 'LEGO Star Wars', 'Millennium Falcon készlet, bontatlan.', 'Debrecen', 45000, 'lego.jpg');
+INSERT INTO `termek` (`userid`, `katid`, `termeknev`, `leiras`, `hely`, `ar`, `kep`) VALUES 
+(1, 1, 'Gamer Laptop', 'RTX 3060, 16GB RAM, villámgyors.', 'Budapest', 350000, "https://thumbs.dreamstime.com/b/modern-gaming-laptop-mockup-side-view-isolated-white-background-402342273.jpg"),
+(2, 2, 'Nyári Ruha', 'Könnyed pamut viselet, virágmintás.', 'Pécs', 8500, 'https://loremflickr.com'),
+(3, 4, 'Teniszütő', 'Profi Wilson ütő, alig használt.', 'Győr', 22000, 'https://loremflickr.com'),
+(1, 3, 'Kávéfőző', 'Darálós automata gép.', 'Budapest', 95000, 'https://images.unsplash.com');
+
 
 -- --------------------------------------------------------
 
