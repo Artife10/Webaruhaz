@@ -66,9 +66,9 @@ CREATE TABLE `termek` (
 
 INSERT INTO `termek` (`userid`, `katid`, `termeknev`, `leiras`, `hely`, `ar`, `kep`) VALUES 
 (1, 1, 'Gamer Laptop', 'RTX 3060, 16GB RAM, villámgyors.', 'Budapest', 350000, "https://thumbs.dreamstime.com/b/modern-gaming-laptop-mockup-side-view-isolated-white-background-402342273.jpg"),
-(2, 2, 'Nyári Ruha', 'Könnyed pamut viselet, virágmintás.', 'Pécs', 8500, 'https://loremflickr.com'),
-(3, 4, 'Teniszütő', 'Profi Wilson ütő, alig használt.', 'Győr', 22000, 'https://loremflickr.com'),
-(1, 3, 'Kávéfőző', 'Darálós automata gép.', 'Budapest', 95000, 'https://images.unsplash.com');
+(2, 2, 'Nyári Ruha', 'Könnyed pamut viselet, virágmintás.', 'Pécs', 8500, 'https://st3.depositphotos.com/3966821/16113/i/450/depositphotos_161132796-stock-photo-summer-beach-outfit.jpg'),
+(3, 4, 'Teniszütő', 'Profi Wilson ütő, alig használt.', 'Győr', 22000, 'https://www.regiojatek.hu/data/regio_images/normal2/07978_0.jpg'),
+(1, 3, 'Kávéfőző', 'Darálós automata gép.', 'Budapest', 95000, 'https://img.jofogas.hu/620x620aspect/Philips_EP_1200_kavefozo_automata_daralos_kavegep_727492754562689.jpg');
 
 
 -- --------------------------------------------------------

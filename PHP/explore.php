@@ -45,9 +45,7 @@
                                 }
                                 $i++;
                             echo    "
-                                        <td>
-                                            <td> <img src=".$infoItems['kep'].">".$infoItems['termeknev'].$infoItems['leiras']."</td>
-                                        </td>
+                                        <td> <div class='gridhead'><img src=".$infoItems['kep']." alt='a fityfenét nem töltött be'> </div><div class='gridbody'><h1>".$infoItems['termeknev']."</h1><p>".$infoItems['leiras']."</p><button class='buy'>BUY</button></div></td>
                             ";
 
             }

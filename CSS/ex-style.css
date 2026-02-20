@@ -101,3 +101,48 @@ body {
     scale: 0.98;
     background: rgba(0, 179, 75, 0.11);
 }
+
+.grid{
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    color: white;
+    font-size: small;
+}
+
+.grid td{
+    padding: 10px;
+    width: 300px;
+    height: 500px;
+}
+
+.grid img{
+    border-style: solid;
+    border-color: #1f4d38;
+    width: 300px;
+    height: 300px;
+    border-radius: 12px;
+}
+
+.grid h1 p {
+    border-style: solid;
+    border-color: #1f4d38;
+}
+.gridbody{
+    border-radius: 12px;
+    border-style: solid;
+    border-color: #1f4d38;
+    top: 0px;
+    height: 200px;
+    align-items: center;
+}
+
+.buy{
+    background: #2BEE79;
+    height: 45px;
+    width: 200px;
+    border: 0;
+    border-radius: 12px;
+    margin: 10px;
+    font-size: 15px;
+}
