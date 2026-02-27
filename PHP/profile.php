@@ -10,6 +10,7 @@ session_start();
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../CSS/prof-style.css">
+    <link rel="icon" type="image/x-icon" href="../ASSETS/favicon.ico">
     <title>Tradely - Profile</title>
 </head>
 <body>
@@ -24,21 +25,21 @@ session_start();
     <h1><?php echo htmlspecialchars($_SESSION['nev']); ?></h1>
     <p>Member since 2026.</p>
     <hr>  
-
-    <!-- A form nyitása -->
     <form action="update_profile.php" method="POST">
         <p>Name</p>
-        <input id="input" type="text" name="uj_nev" placeholder="Write your name here" value="<?php echo htmlspecialchars($_SESSION['nev']); ?>" required>
-        
+        <input id="input" type="text" name="uj_nev" placeholder="Write your name here" value="<?php echo htmlspecialchars($_SESSION['nev']); ?>" required>     
         <p>Password</p>
-        <input id="input" type="password" name="uj_passw" placeholder="New password (leave empty to keep current)"><br>
-        
-        <!-- A gombnak a formon BELÜL kell lennie -->
+        <input id="input" type="password" name="uj_passw" placeholder="Leave empty to keep current"><br>
         <button type="submit" name="modositas" class="edit-btn">Save Changes</button>
     </form> 
-    <!-- A form zárása az összes input után -->
 </div>
-        
+       <!-- ALSO VALAMI NAVBAR FOOTER-->
+<div class="menu">
+    <button><img src="../ASSETS/search.png" width="40px" height="40px" alt="Keresés"></button>
+    <a href="../PHP/explore.php"><button><img src="../ASSETS/explore.png" width="40px" height="40px" alt="Felfedezés"></button></a>
+    <a href="../PHP/profile.php"><button><img src="../ASSETS/profile.png" alt="" width="40px";></button></a>
+    <a href="../PHP/sell.php"><button><img src="../A" alt=""></button></a>
+</div>
 </body>
 </html>
 
