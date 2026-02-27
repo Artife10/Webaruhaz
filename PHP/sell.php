@@ -1,14 +1,35 @@
 <?php
-// 1. ADATFELDOLGOZÁS (PHP)
+// --- 1. PHP ADATFELDOLGOZÁS ---
 $uzenet = "";
+$target_dir = "uploads/";
+
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
-    // Itt kapod meg az adatokat az űrlapról
-    $cim = $_POST['title'] ?? 'Nincs megadva';
-    $ar = $_POST['price'] ?? '0';
-    
-    // Itt végezhetnél adatbázisba mentést (pl. MySQL)
-    // Most csak egy visszajelzést adunk:
-    $uzenet = "Sikeres feltöltés: " . htmlspecialchars($cim) . " (" . htmlspecialchars($ar) . ")";
+    // Adatok begyűjtése
+    $cim = $_POST['title'] ?? '';
+    $kategoria = $_POST['category'] ?? '';
+    $ar = $_POST['price'] ?? '';
+    $leiras = $_POST['description'] ?? '';
+
+    // Mappa létrehozása a képeknek
+    if (!file_exists($target_dir)) {
+        mkdir($target_dir, 0777, true);
+    }
+
+    // Képek feltöltése
+    $feltoltott_db = 0;
+    if (!empty($_FILES['photos']['name'][0])) {
+        foreach ($_FILES['photos']['name'] as $key => $val) {
+            $fileName = basename($_FILES['photos']['name'][$key]);
+            $targetFilePath = $target_dir . time() . "_" . $fileName;
+            
+            if (move_uploaded_file($_FILES['photos']['tmp_name'][$key], $targetFilePath)) {
+                $feltoltott_db++;
+            }
+        }
+        $uzenet = "Sikeresen közzétéve! ($feltoltott_db kép feltöltve)";
+    } else {
+        $uzenet = "Hirdetés közzétéve képek nélkül.";
+    }
 }
 ?>
 
@@ -17,101 +38,107 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Hirdetés Kezelő</title>
+    <title>List New Item</title>
     <style>
-        /* 2. MEGJELENÉS (CSS) - A képed alapján */
+        /* --- 2. DESIGN (CSS) --- */
         :root {
-            --hatter: #0a0e0a;
-            --kartya: #131a13;
-            --bevitel: #1c261c;
-            --zold: #21e67b;
-            --szurke: #8a8e8a;
-            --feher: #ffffff;
+            --bg-color: #0a110a;
+            --card-bg: #141d14;
+            --input-bg: #1c271c;
+            --accent-green: #2ecc71;
+            --text-white: #ffffff;
+            --text-gray: #888;
         }
 
         body {
-            background-color: var(--hatter);
-            color: var(--feher);
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            margin: 0;
+            background-color: var(--bg-color);
+            color: var(--text-white);
+            font-family: 'Segoe UI', sans-serif;
             display: flex;
             justify-content: center;
+            margin: 0;
             padding: 20px;
         }
 
-        .app-container {
-            width: 100%;
-            max-width: 400px;
-        }
+        .container { width: 100%; max-width: 450px; }
 
         .header {
             display: flex;
             justify-content: space-between;
-            padding: 10px 0;
+            align-items: center;
+            padding: 10px 0 20px 0;
             font-size: 14px;
-            font-weight: 500;
         }
 
-        .header .cancel { color: var(--szurke); cursor: pointer; }
-        .header .drafts { color: var(--zold); cursor: pointer; }
-
-        .upload-box {
-            background-color: var(--kartya);
-            border: 2px dashed #2a362a;
+        /* Feltöltő zóna */
+        .upload-section {
+            border: 2px dashed #263626;
             border-radius: 15px;
+            padding: 30px 20px;
             text-align: center;
-            padding: 40px 20px;
-            margin: 20px 0;
+            background-color: var(--card-bg);
+            margin-bottom: 20px;
+            cursor: pointer;
         }
 
-        .upload-icon {
-            font-size: 40px;
-            color: var(--zold);
-            margin-bottom: 10px;
-        }
-
+        .upload-icon { font-size: 32px; color: var(--accent-green); margin-bottom: 10px; }
+        
         .upload-btn {
             background-color: #1a2e1a;
-            color: var(--zold);
+            color: var(--accent-green);
             border: none;
-            padding: 10px 25px;
-            border-radius: 8px;
+            padding: 8px 20px;
+            border-radius: 6px;
             font-weight: bold;
+            margin-top: 10px;
             cursor: pointer;
+        }
+
+        #preview-container {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
             margin-top: 15px;
+            justify-content: center;
         }
 
-        .form-group {
-            margin-bottom: 20px;
+        .preview-img {
+            width: 60px;
+            height: 60px;
+            object-fit: cover;
+            border-radius: 6px;
+            border: 1px solid #333;
         }
 
+        /* Űrlap elemek */
+        .form-group { margin-bottom: 18px; }
+        
         label {
             display: block;
             margin-bottom: 8px;
             font-size: 14px;
-            font-weight: bold;
+            font-weight: 600;
         }
 
         input, select, textarea {
             width: 100%;
-            background-color: var(--bevitel);
+            background-color: var(--input-bg);
             border: none;
-            border-radius: 12px;
-            padding: 15px;
+            border-radius: 10px;
+            padding: 14px;
             color: white;
-            font-size: 14px;
+            font-size: 15px;
             box-sizing: border-box;
         }
 
-        .price-text {
-            color: var(--zold);
-            font-weight: bold;
-        }
+        input::placeholder, textarea::placeholder { color: #555; }
+
+        .price-input { color: var(--accent-green); font-weight: bold; }
 
         .publish-btn {
             width: 100%;
-            background-color: var(--zold);
-            color: black;
+            background-color: var(--accent-green);
+            color: #000;
             border: none;
             padding: 16px;
             border-radius: 12px;
@@ -120,75 +147,100 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             cursor: pointer;
             margin-top: 10px;
             display: flex;
-            justify-content: center;
             align-items: center;
-            gap: 8px;
+            justify-content: center;
+            gap: 10px;
         }
 
         .status-msg {
             background: #1a331a;
-            color: var(--zold);
-            padding: 10px;
-            border-radius: 8px;
-            margin-bottom: 15px;
+            color: var(--accent-green);
+            padding: 12px;
+            border-radius: 10px;
+            margin-bottom: 20px;
             text-align: center;
         }
     </style>
 </head>
 <body>
 
-<div class="app-container">
+<div class="container">
     <div class="header">
-        <div class="cancel">Mégse</div>
-        <div>Új hirdetés</div>
-        <div class="drafts">Vázlatok</div>
+        <span style="color: var(--text-gray); cursor: pointer;">Cancel</span>
+        <strong style="font-size: 16px;">List New Item</strong>
+        <span style="color: var(--accent-green); cursor: pointer;">Drafts</span>
     </div>
 
     <?php if ($uzenet): ?>
         <div class="status-msg"><?php echo $uzenet; ?></div>
     <?php endif; ?>
 
-    <!-- 3. SZERKEZET (HTML) -->
-    <form action="" method="POST">
-        <div class="upload-box">
+    <!-- --- 3. FORM (HTML) --- -->
+    <form action="" method="POST" enctype="multipart/form-data">
+        
+        <!-- Képfeltöltés -->
+        <input type="file" name="photos[]" id="fileInput" multiple accept="image/*" style="display: none;" onchange="showPreview(this)">
+        
+        <div class="upload-section" onclick="document.getElementById('fileInput').click()">
             <div class="upload-icon">📸</div>
-            <div style="font-weight: bold;">Fotók hozzáadása</div>
-            <div style="font-size: 11px; color: var(--szurke); margin-top: 5px;">
-                Maximum 10 fotó. Az első lesz a borítókép.
-            </div>
-            <button type="button" class="upload-btn">Feltöltés</button>
+            <div style="font-weight: bold; font-size: 15px;">Add Photos</div>
+            <p style="color: var(--text-gray); font-size: 12px; margin: 5px 0;">Up to 10 photos. First one is the cover.</p>
+            <button type="button" class="upload-btn">Upload</button>
+            <div id="preview-container"></div>
         </div>
 
         <div class="form-group">
-            <label>Cím</label>
-            <input type="text" name="title" placeholder="Mit árulsz?" required>
+            <label>Title</label>
+            <input type="text" name="title" placeholder="What are you selling?" required>
         </div>
 
         <div class="form-group">
-            <label>Kategória</label>
+            <label>Category</label>
             <select name="category">
-                <option value="">Válassz kategóriát</option>
-                <option value="electronics">Elektronika</option>
-                <option value="fashion">Divat</option>
-                <option value="home">Otthon</option>
+                <option value="">Select a category</option>
+                <option value="electronics">Electronics</option>
+                <option value="fashion">Fashion</option>
+                <option value="home">Home & Garden</option>
             </select>
         </div>
 
         <div class="form-group">
-            <label>Ár</label>
-            <input type="text" name="price" class="price-text" placeholder="$ 0.00">
+            <label>Price</label>
+            <input type="text" name="price" class="price-input" placeholder="$ 0.00">
+            <p style="font-size: 11px; color: var(--text-gray); margin-top: 5px;">Tip: Similar items sell for $45 - $60</p>
         </div>
 
         <div class="form-group">
-            <label>Leírás</label>
-            <textarea name="description" rows="4" placeholder="Írd le a termék állapotát, jellemzőit..."></textarea>
+            <label>Description</label>
+            <textarea name="description" rows="4" placeholder="Describe your item's condition, features or reasons for selling..."></textarea>
         </div>
 
         <button type="submit" class="publish-btn">
-            <span>📤</span> Hirdetés közzététele
+            <span>⬆️</span> Publish Listing
         </button>
     </form>
 </div>
+
+<script>
+// --- 4. INTERAKCIÓ (JS) ---
+function showPreview(input) {
+    const container = document.getElementById('preview-container');
+    container.innerHTML = ""; // Régi előnézet törlése
+    
+    if (input.files) {
+        Array.from(input.files).forEach(file => {
+            const reader = new FileReader();
+            reader.onload = function(e) {
+                const img = document.createElement("img");
+                img.src = e.target.result;
+                img.className = "preview-img";
+                container.appendChild(img);
+            }
+            reader.readAsDataURL(file);
+        });
+    }
+}
+</script>
 
 </body>
 </html>
