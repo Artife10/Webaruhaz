@@ -101,10 +101,13 @@ font-family: system-ui, sans-serif;
     font-weight: 700;
     height: 45px;
     width: 300px;
-    border: 0;
+    border: 5px;
     border-radius: 12px;
     margin: 10px;
     font-size: 15px;
     text-align: center;
     font-size: 16px;
+    background-color: #143124;
+    border-color: #D0DAE6;
+    color: #D0DAE6;
 }
