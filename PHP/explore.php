@@ -44,7 +44,14 @@ if (isset($_GET['kereses'])) {
                         if (!$connection) {
                             die("Kapcsolódási hiba: " . mysqli_connect_error());
                         }
-                        $sql = "SELECT * FROM `termek` WHERE `termeknev` LIKE '%$keresett%'";
+                        if (str_contains($keresett, ':')!= TRUE) {
+                            $sql = "SELECT * FROM `termek` WHERE `termeknev` LIKE '%$keresett%'";
+                        }
+                        else {
+                            $keresett = ltrim($keresett, ":");
+                            $sql = "SELECT * FROM termek INNER JOIN kategoria ON kategoria.katid = termek.katid WHERE kategoria.katnev LIKE '$keresett';";
+                        }
+                        
                         $result = mysqli_query($connection, $sql);
                         
                         if (mysqli_num_rows($result) > 0) {
