@@ -80,7 +80,8 @@ INSERT INTO `termek` (`userid`, `katid`, `termeknev`, `leiras`, `hely`, `ar`, `k
 CREATE TABLE `users` (
   `userid` int(11) NOT NULL,
   `nev` varchar(255) NOT NULL,
-  `password` varchar(64) NOT NULL
+  `password` varchar(64) NOT NULL,
+  `pfp` varchar(64) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
