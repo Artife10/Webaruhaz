@@ -73,3 +73,27 @@ font-family: system-ui, sans-serif;
     margin: 10px;
     font-size: 15px;
 }
+.menu{
+    position: fixed;
+    bottom: 0;
+    min-width: 100%;
+    display: flex;
+    background: #143124;
+    height: 80px;
+    justify-content: center;
+    align-items: center;
+    gap: 50px;
+}
+.menu button{
+    border-radius: 300px;
+    background: rgba(0, 179, 75, 0);
+    width: 60px;
+    height: 60px;
+    border: 0;
+    margin-left: 10px;
+    margin-right: 10px;
+}
+.menu button:active{
+    scale: 0.98;
+    background: rgba(0, 179, 75, 0.11);
+}

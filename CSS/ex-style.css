@@ -113,7 +113,7 @@ body {
 .grid td{
     padding: 10px;
     width: 300px;
-    height: 500px;
+    height: 800px;
 }
 
 .grid img{
@@ -133,7 +133,7 @@ body {
     border-style: solid;
     border-color: #1f4d38;
     top: 0px;
-    height: 200px;
+    height: 300px;
     align-items: center;
 }
 
@@ -145,4 +145,5 @@ body {
     border-radius: 12px;
     margin: 10px;
     font-size: 15px;
+    justify-content: flex-end;
 }
