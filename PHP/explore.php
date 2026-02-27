@@ -13,7 +13,8 @@
         </div>
         <div class="icons">
             <button><img src="../ASSETS/bell.png" alt="" width= "30px";></button>
-            <button><img src="../ASSETS/filter.png" alt="" width="30px";></button>
+            <a href="../PHP/profile.php"><button><img src="../ASSETS/profile.png" alt="" width="30px";></button></a>
+            
         </div>
     </div><form method="GET" action="">
     <div class="searchbar">
@@ -67,7 +68,7 @@ if (isset($_GET['kereses'])) {
     <div class="menu">
         <button><img src="../ASSETS/search.png" width="40px" height="40px" alt="Keresés"></button>
         <button><img src="../ASSETS/explore.png" width="40px" height="40px" alt="Felfedezés"></button>
-        <a href="../PHP/profile.php"><button><img src="../ASSETS/profile.png" width="40px" height="40px" alt="Profil"></button></a>
+            <a href="../PHP/profile.php"><button><img src="../ASSETS/profile.png" alt="" width="40px";></button></a>
     </div>
 </body>
 </html>

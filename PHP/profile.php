@@ -17,8 +17,7 @@
         <h1>Kis Bela</h1>
         <p>Member since 2026.</p>
         <button>Edit Profile</button>
-        <hr>
-        
+        <hr>  
      </div>
      <!-- ALSO VALAMI NAVBAR FOOTER-->
     <div class="menu">
