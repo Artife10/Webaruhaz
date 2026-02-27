@@ -1,5 +1,5 @@
 <?php
-
+session_start();
 $connection = mysqli_connect("localhost", "root", "", "tradely");
 
 
@@ -15,6 +15,8 @@ else {
 
     if ($result && $nev != "" && $passw != "") {
       if ($result->num_rows > 0) {
+        $row = mysqli_fetch_assoc($result); 
+        $_SESSION['nev'] = $row['nev'];
         header('Location: '."explore.php");
       }
       else {
@@ -24,7 +26,11 @@ else {
     else {
         header('Location: '."login.php");
     }
+
+
 }
+
+
 
     
 ?>
