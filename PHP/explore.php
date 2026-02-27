@@ -49,7 +49,7 @@ if (isset($_GET['kereses'])) {
                         }
                         else {
                             $keresett = ltrim($keresett, ":");
-                            $sql = "SELECT * FROM termek INNER JOIN kategoria ON kategoria.katid = termek.katid WHERE kategoria.katnev LIKE '$keresett';";
+                            $sql = "SELECT * FROM termek INNER JOIN kategoria ON kategoria.katid = termek.katid WHERE kategoria.katnev LIKE '%$keresett%';";
                         }
                         
                         $result = mysqli_query($connection, $sql);
@@ -61,7 +61,7 @@ if (isset($_GET['kereses'])) {
                                 if ($i % 4 == 0 && $i != 0) {
                                     echo "</tr><tr>";
                                 }
-                                echo "<td><div class='gridhead'><img src=".$infoItems['kep']." alt='a fityfenét nem töltött be'></div><div class='gridbody'><h2>".$infoItems['hely']."</h2><h1>".$infoItems['termeknev']."</h1><p>".$infoItems['leiras']."</p><button class='buy'>BUY</button></div></td>";
+                                echo "<td><div class='gridhead'><img src=".$infoItems['kep']." alt='a fityfenét nem töltött be'></div><div class='gridbody'><h3>".$infoItems['hely']."</h3><h1>".$infoItems['termeknev']."</h1><p>".$infoItems['leiras']."</p><button class='buy'>BUY</button></div></td>";
                                 $i++;
                             }
                         }
