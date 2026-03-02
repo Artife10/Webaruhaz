@@ -38,137 +38,17 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>List New Item</title>
-    <style>
-        /* --- 2. DESIGN (CSS) --- */
-        :root {
-            --bg-color: #0a110a;
-            --card-bg: #141d14;
-            --input-bg: #1c271c;
-            --accent-green: #2ecc71;
-            --text-white: #ffffff;
-            --text-gray: #888;
-        }
-
-        body {
-            background-color: var(--bg-color);
-            color: var(--text-white);
-            font-family: 'Segoe UI', sans-serif;
-            display: flex;
-            justify-content: center;
-            margin: 0;
-            padding: 20px;
-        }
-
-        .container { width: 100%; max-width: 450px; }
-
-        .header {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            padding: 10px 0 20px 0;
-            font-size: 14px;
-        }
-
-        /* Feltöltő zóna */
-        .upload-section {
-            border: 2px dashed #263626;
-            border-radius: 15px;
-            padding: 30px 20px;
-            text-align: center;
-            background-color: var(--card-bg);
-            margin-bottom: 20px;
-            cursor: pointer;
-        }
-
-        .upload-icon { font-size: 32px; color: var(--accent-green); margin-bottom: 10px; }
-        
-        .upload-btn {
-            background-color: #1a2e1a;
-            color: var(--accent-green);
-            border: none;
-            padding: 8px 20px;
-            border-radius: 6px;
-            font-weight: bold;
-            margin-top: 10px;
-            cursor: pointer;
-        }
-
-        #preview-container {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 8px;
-            margin-top: 15px;
-            justify-content: center;
-        }
-
-        .preview-img {
-            width: 60px;
-            height: 60px;
-            object-fit: cover;
-            border-radius: 6px;
-            border: 1px solid #333;
-        }
-
-        /* Űrlap elemek */
-        .form-group { margin-bottom: 18px; }
-        
-        label {
-            display: block;
-            margin-bottom: 8px;
-            font-size: 14px;
-            font-weight: 600;
-        }
-
-        input, select, textarea {
-            width: 100%;
-            background-color: var(--input-bg);
-            border: none;
-            border-radius: 10px;
-            padding: 14px;
-            color: white;
-            font-size: 15px;
-            box-sizing: border-box;
-        }
-
-        input::placeholder, textarea::placeholder { color: #555; }
-
-        .price-input { color: var(--accent-green); font-weight: bold; }
-
-        .publish-btn {
-            width: 100%;
-            background-color: var(--accent-green);
-            color: #000;
-            border: none;
-            padding: 16px;
-            border-radius: 12px;
-            font-size: 16px;
-            font-weight: bold;
-            cursor: pointer;
-            margin-top: 10px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            gap: 10px;
-        }
-
-        .status-msg {
-            background: #1a331a;
-            color: var(--accent-green);
-            padding: 12px;
-            border-radius: 10px;
-            margin-bottom: 20px;
-            text-align: center;
-        }
-    </style>
+    <title> Tradely - List New Item</title>
+    <link rel="stylesheet" href="../CSS/list.css">
+    <link rel="icon" type="image/x-icon" href="../ASSETS/favicon.ico">
 </head>
 <body>
 
 <div class="container">
     <div class="header">
-        <span style="color: var(--text-gray); cursor: pointer;">Cancel</span>
+        <span style="color: var(--text-gray); cursor: pointer;"></span>
         <strong style="font-size: 16px;">List New Item</strong>
-        <span style="color: var(--accent-green); cursor: pointer;">Drafts</span>
+        <span style="color: var(--accent-green); cursor: pointer;"></span>
     </div>
 
     <?php if ($uzenet): ?>
@@ -219,6 +99,11 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             <span>⬆️</span> Publish Listing
         </button>
     </form>
+</div>
+<div class="menu">
+    <a href="../PHP/explore.php"><button><img src="../ASSETS/explore.png" width="40px" height="40px" alt="Felfedezés"></button></a>
+    <a href="../PHP/sell.php"><button><img src="../ASSETS/add.png" alt="" width="30px" height="30px"></button></a>
+    <a href="../PHP/profile.php"><button><img src="../ASSETS/profile.png" alt="" width="40px";></button></a>
 </div>
 
 <script>

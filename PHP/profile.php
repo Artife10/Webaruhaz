@@ -35,10 +35,9 @@ session_start();
 </div>
        <!-- ALSO VALAMI NAVBAR FOOTER-->
 <div class="menu">
-    <button><img src="../ASSETS/search.png" width="40px" height="40px" alt="Keresés"></button>
     <a href="../PHP/explore.php"><button><img src="../ASSETS/explore.png" width="40px" height="40px" alt="Felfedezés"></button></a>
+    <a href="../PHP/sell.php"><button><img src="../ASSETS/add.png" alt="" width="30px" height="30px"></button></a>
     <a href="../PHP/profile.php"><button><img src="../ASSETS/profile.png" alt="" width="40px";></button></a>
-    <a href="../PHP/sell.php"><button><img src="../A" alt=""></button></a>
 </div>
 </body>
 </html>
