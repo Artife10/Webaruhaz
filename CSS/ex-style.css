@@ -126,6 +126,7 @@ body {
     gap: 30px; /* Ezt növeld, ha nagyobb közt szeretnél (pl. 40px) */
     padding: 20px;
     width: 100%;
+    margin: 0 auto;
 }
 
 
