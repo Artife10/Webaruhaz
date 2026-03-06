@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=ű, initial-scale=1.0">
     <title>Register</title>
+    <link rel="icon" type="image/x-icon" href="../ASSETS/favicon.ico">
     <link rel="stylesheet" href="../css/style.css">
 </head>
 <body>

@@ -1,5 +1,5 @@
 <?php
-
+session_start();
 $connection = mysqli_connect("localhost", "root", "", "tradely");
 
 
@@ -20,8 +20,11 @@ else {
       else {
         $sql = "INSERT INTO `users`(`nev`, `password`) VALUES ('$nev','$passw')";
         $result = mysqli_query($connection, $sql);
+        $_SESSION['nev'] = $nev;
         header('Location: '."explore.php");
       }
+          
+          
     }
     else {
         header('Location: '."register.php");
