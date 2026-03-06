@@ -123,16 +123,23 @@ body {
     display: grid;
     /* Mobilon 2 oszlop, tableten/PC-n maradjon a 4 oszlop */
     grid-template-columns: repeat(auto-fit, minmax(160px, 1fr)); 
-    gap: 30px; /* Ezt növeld, ha nagyobb közt szeretnél (pl. 40px) */
+    gap: 20px; 
     padding: 20px;
-    width: 100%;
+    width: 90%;
     margin: 0 auto;
+    padding-bottom: 80px;
 }
 
 
 .grid tr, .grid td {
     display: block;
     width: 100%;
+}
+.grid td{
+    display: flex;
+    flex-direction: column; 
+    height: 720px;          
+    justify-content: space-between; 
 }
  
 .grid img {
