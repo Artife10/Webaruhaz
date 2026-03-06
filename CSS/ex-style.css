@@ -184,3 +184,7 @@ body {
         grid-template-columns: repeat(4, 1fr); /* PC-n 4 oszlop */
     }
 }
+
+.logo{
+    width: 100px;
+}

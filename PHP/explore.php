@@ -4,12 +4,13 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../CSS/ex-style.css">
-    <link rel="icon" type="image/x-icon" href="../ASSETS/favicon.ico">
+    <link rel="icon" type="image/x-icon" href="../ASSETS/logo.png">
     <title>Tradely</title>
 </head>
 <body>
     <div class="navbar">
         <div class="title">
+            <img src="../ASSETS/logo.png" alt="" class='logo'>
             <h1>Explore.</h1>
         </div>
         <div class="icons">
