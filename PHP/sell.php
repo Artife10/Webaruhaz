@@ -40,7 +40,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title> Tradely - List New Item</title>
     <link rel="stylesheet" href="../CSS/list.css">
-    <link rel="icon" type="image/x-icon" href="../ASSETS/favicon.ico">
+    <link rel="icon" type="image/x-icon" href="../ASSETS/logo.png">
 </head>
 <body>
 
@@ -77,16 +77,16 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         <div class="form-group">
             <label>Category</label>
             <select name="category">
-                <option value="">Select a category</option>
+                <option value="">Válassz kategóriát</option>
                 <option value="electronics">Elektronikai termékek</option>
                 <option value="fashion">Divat</option>
-                <option value="home">Házi eszközök és kert</option>
+                <option value="home">Otthon és kert</option>
             </select>
         </div>
 
         <div class="form-group">
             <label>Price</label>
-            <input type="text" name="price" class="price-input" placeholder="$ 0.00">
+            <input type="text" name="price" class="price-input" placeholder="HUF 0.00">
             <p style="font-size: 11px; color: var(--text-gray); margin-top: 5px;">Tip: hasonló termékek 15.000FT-20.000FT közt mozognak </p>
         </div>
 
