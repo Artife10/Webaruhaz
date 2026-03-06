@@ -43,8 +43,7 @@ font-family: system-ui, sans-serif;
     overflow: hidden;
 }
 .avatar-ring img{
-    width: 80%;
-    margin-top: 20px;
+    width: 100%;
 }
 .icon-badge {
     position: absolute;

@@ -9,10 +9,10 @@
 </head>
 <body>
     <div class="card">
-        <img src="../ASSETS/welcome-pic.jpg" width="300px">
+        <img src="../ASSETS/welcome.png" width="300px">
         <table>
             <tr>
-                <th><img src="../ASSETS/trade.png" alt="" width="50px"></th> <br>
+                <th><img src="../ASSETS/logo.png" alt="" width="100px"></th> <br>
                 <th><h1>Tradely</h1></th>
             </tr>    
         </table>
