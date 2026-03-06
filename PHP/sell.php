@@ -87,7 +87,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         <div class="form-group">
             <label>Price</label>
             <input type="text" name="price" class="price-input" placeholder="$ 0.00">
-            <p style="font-size: 11px; color: var(--text-gray); margin-top: 5px;">Tip: Similar items sell for $45 - $60</p>
+            <p style="font-size: 11px; color: var(--text-gray); margin-top: 5px;">Tip: hasonló termékek 15.000FT-20.000FT közt mozognak </p>
         </div>
 
         <div class="form-group">
