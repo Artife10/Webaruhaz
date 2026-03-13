@@ -1,5 +1,10 @@
 <?php
-// --- 1. PHP ADATFELDOLGOZÁS ---
+
+$connection = mysqli_connect("localhost", "root", "", "tradely");
+
+if (!$connection) {
+    die("Kapcsolódási hiba: " . mysqli_connect_error());
+}
 
 
 $uzenet = "";
@@ -23,10 +28,14 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         foreach ($_FILES['photos']['name'] as $key => $val) {
             $fileName = basename($_FILES['photos']['name'][$key]);
             $targetFilePath = $target_dir . time() . ".png";
+            $targetpath = "uploads/".time() . ".png";
             
             if (move_uploaded_file($_FILES['photos']['tmp_name'][$key], $targetFilePath)) {
                 $feltoltott_db++;
             }
+
+
+
         }
         $uzenet = "Sikeresen közzétéve! ($feltoltott_db kép feltöltve)";
     } else {
