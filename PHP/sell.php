@@ -1,5 +1,7 @@
 <?php
 // --- 1. PHP ADATFELDOLGOZÁS ---
+
+
 $uzenet = "";
 $target_dir = "uploads/";
 
@@ -77,10 +79,21 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         <div class="form-group">
             <label>Category</label>
             <select name="category">
-                <option value="">Válassz kategóriát</option>
-                <option value="electronics">Elektronikai termékek</option>
-                <option value="fashion">Divat</option>
-                <option value="home">Otthon és kert</option>
+                  <?php
+                $connection = mysqli_connect("localhost", "root", "", "tradely");
+
+                if (!$connection) {
+                    die("Kapcsolódási hiba: " . mysqli_connect_error());
+                }
+
+
+                $sql = "SELECT * FROM `kategoria`";
+                $result = mysqli_query($connection, $sql);
+
+                while ($row = mysqli_fetch_array($result)) {
+                    echo '<option value="' . $row['katid'] . '">' . htmlspecialchars($row['katnev']) . '</option>';
+                }
+                ?>
             </select>
         </div>
 
@@ -125,6 +138,7 @@ function showPreview(input) {
         });
     }
 }
+
 </script>
 
 </body>
