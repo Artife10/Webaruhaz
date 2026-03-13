@@ -20,7 +20,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     if (!empty($_FILES['photos']['name'][0])) {
         foreach ($_FILES['photos']['name'] as $key => $val) {
             $fileName = basename($_FILES['photos']['name'][$key]);
-            $targetFilePath = $target_dir . time() . "_" . $fileName;
+            $targetFilePath = $target_dir . time() . ".png";
             
             if (move_uploaded_file($_FILES['photos']['tmp_name'][$key], $targetFilePath)) {
                 $feltoltott_db++;
@@ -98,6 +98,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         <button type="submit" class="publish-btn">
             <span>⬆️</span> Publish Listing
         </button>
+        <br><br><br><br><br>
     </form>
 </div>
 <div class="menu">
