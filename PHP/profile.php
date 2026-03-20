@@ -30,6 +30,18 @@ session_start();
         <input id="input" type="text" name="uj_nev" placeholder="Write your name here" value="<?php echo htmlspecialchars($_SESSION['nev']); ?>" required>     
         <p>Password</p>
         <input id="input" type="password" name="uj_passw" placeholder="Leave empty to keep current"><br>
+        <?php
+
+  
+  $plaintext_password = "Password@123";
+
+  
+  $hash = password_hash($plaintext_password, 
+          PASSWORD_DEFAULT);
+
+  
+  echo "Generated hash: ".$hash;
+?>
         <button type="submit" name="modositas" class="edit-btn">Save Changes</button>
     </form> 
 </div>

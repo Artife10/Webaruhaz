@@ -33,7 +33,11 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             if (move_uploaded_file($_FILES['photos']['tmp_name'][$key], $targetFilePath)) {
                 $feltoltott_db++;
             }
+<<<<<<< Updated upstream
             $sql = "INSERT INTO "
+=======
+
+>>>>>>> Stashed changes
 
 
         }
@@ -88,6 +92,16 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         <div class="form-group">
             <label>Category</label>
             <select name="category">
+<<<<<<< Updated upstream
+=======
+<<<<<<< HEAD
+                <option value="">Válassz kategóriát</option>
+                <option value="electronics">Elektronikai termékek</option>
+                <option value="fashion">Divat</option>
+                <option value="home">Otthon és kert</option>
+                
+=======
+>>>>>>> Stashed changes
                   <?php
                 $connection = mysqli_connect("localhost", "root", "", "tradely");
 
@@ -103,6 +117,10 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                     echo '<option value="' . $row['katid'] . '">' . htmlspecialchars($row['katnev']) . '</option>';
                 }
                 ?>
+<<<<<<< Updated upstream
+=======
+>>>>>>> 70507e83dc66d4295e787a318bfad1267f17bb5a
+>>>>>>> Stashed changes
             </select>
         </div>
 
