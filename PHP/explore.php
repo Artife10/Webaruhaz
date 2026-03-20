@@ -67,7 +67,7 @@
                         if ($i % 4 == 0 && $i != 0) {
                             echo "</tr><tr>";
                         }
-                        echo "<td><div class='gridhead'><img src=" . $infoItems['kep'] . " alt='a fityfenét nem töltött be'></div><div class='gridbody'><h3>" . $infoItems['hely'] . "</h3><h1>" . $infoItems['termeknev'] . "</h1><p>" . $infoItems['leiras'] . "</p><button class='buy'>BUY</button></div></td>";
+                        echo "<td><div class='gridhead'><img src=" . $infoItems['kep'] . " alt='a fityfenét nem töltött be'><h3>" . $infoItems['hely'] . "</h3><h1>" . $infoItems['termeknev'] . "</h1><p>" . $infoItems['leiras'] . "</p><button class='buy'>BUY</button></div></td>";
                         $i++;
                     }
                 }

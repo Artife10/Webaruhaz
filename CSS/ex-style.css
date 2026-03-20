@@ -156,7 +156,7 @@ body {
     border-color: #1f4d38;
 }
 
-.gridbody {
+.gridhead {
     display: flex;
     flex-direction: column;
     align-items: center;    
