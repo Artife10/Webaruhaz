@@ -54,7 +54,6 @@ CREATE TABLE `termek` (
 --
 -- A tábla adatainak kiíratása `termek`
 --
-<<<<<<< Updated upstream
 
 INSERT INTO `termek` (`termekid`, `userid`, `katid`, `termeknev`, `leiras`, `hely`, `ar`, `kep`) VALUES
 (0, 1, 1, 'Gamer Laptop', 'RTX 3060, 16GB RAM, villámgyors.', 'Budapest', 350000, 'https://thumbs.dreamstime.com/b/modern-gaming-laptop-mockup-side-view-isolated-white-background-402342273.jpg'),
@@ -72,171 +71,9 @@ INSERT INTO `termek` (`termekid`, `userid`, `katid`, `termeknev`, `leiras`, `hel
 (0, 1, 4, 'Súlyzó készlet', '2x10 kg, öntöttvas tárcsákkal.', 'Budapest', 25000, 'https://s8.badu.bg/photos/886687/400x400_657b07de29ebc.jpg'),
 (0, 2, 2, 'Nike Futócipő', 'Air Zoom, 42-es méret, neon zöld.', 'Pécs', 28500, 'https://www.futanet.hu/img/up/pic_15004.jpg'),
 (0, 0, 2, 'Tükör (nagy)', 'Hatalmas tükör eladó csak kp vagy tesco kupon', 'Cserkeszőlő', 12000, 'https://kep.index.hu/1/0/4266/42667/426677/42667714_fd64f7b5a83c91e219855de9a40aca08_wm.jpg'),
-(0, 1, 3, 'Gamer szék', 'Nagyon kényelmes, csak kicsit nehéz. A cigány támadások miatt elaó. amúgy 10x10cm', 'Salgótarján, telep', 1000000, 'https://i.ebayimg.com/images/g/eisAAOSwQItUB7tS/s-l1200.jpg'),
-(0, 1, 3, 'Gamer szék', 'Nagyon kényelmes, csak kicsit nehéz. A cigány támadások miatt elaó. amúgy 10x10cm', 'Salgótarján, telep', 1000000, 'https://i.ebayimg.com/images/g/eisAAOSwQItUB7tS/s-l1200.jpg');
+(0, 1, 3, 'Gamer szék', 'Nagyon kényelmes, csak kicsit nehéz. A "cica" támadások miatt elaó. amúgy 10x10cm', 'Salgótarján, telep', 1000000, 'https://i.ebayimg.com/images/g/eisAAOSwQItUB7tS/s-l1200.jpg'),
+(0, 1, 3, '2012 Toyota Corolla', '2 motor (elöl meg hátul)', 'Gádoros', 50000, 'https://cicuskamcatcafe.hu/wp-content/uploads/2025/06/Facetune_28-05-2025-21-21-34-768x1024.jpg');
 
-=======
-INSERT INTO `termek` (
-    `termekid`,
-    `userid`,
-    `katid`,
-    `termeknev`,
-    `leiras`,
-    `hely`,
-    `ar`,
-    `kep`
-  )
-VALUES (
-    0,
-    1,
-    1,
-    'Gamer Laptop',
-    'RTX 3060, 16GB RAM, villámgyors.',
-    'Budapest',
-    350000,
-    'https://thumbs.dreamstime.com/b/modern-gaming-laptop-mockup-side-view-isolated-white-background-402342273.jpg'
-  ),
-  (
-    0,
-    2,
-    2,
-    'Nyári Ruha',
-    'Könnyed pamut viselet, virágmintás.',
-    'Pécs',
-    8500,
-    'https://st3.depositphotos.com/3966821/16113/i/450/depositphotos_161132796-stock-photo-summer-beach-outfit.jpg'
-  ),
-  (
-    0,
-    3,
-    4,
-    'Teniszütő',
-    'Profi Wilson ütő, alig használt.',
-    'Győr',
-    22000,
-    'https://www.regiojatek.hu/data/regio_images/normal2/07978_0.jpg'
-  ),
-  (
-    0,
-    1,
-    3,
-    'Kávéfőző',
-    'Darálós automata gép.',
-    'Budapest',
-    95000,
-    'https://img.jofogas.hu/620x620aspect/Philips_EP_1200_kavefozo_automata_daralos_kavegep_727492754562689.jpg'
-  ),
-  (
-    0,
-    2,
-    1,
-    'iPhone 13 Pro',
-    '128GB, kék, karcmentes állapotban, akku 88%.',
-    'Pécs',
-    210000,
-    'https://i.redd.it/iphone-13-pro-max-from-facebook-marketplace-v0-srr9p9x5yoqd1.jpg?width=1182&format=pjpg&auto=webp&s=1341484848e4ac18cee184cb570d8cf067e7f11b'
-  ),
-  (
-    0,
-    3,
-    5,
-    'LEGO Star Wars Millennium Falcon',
-    'Bontatlan csomagolásban, gyűjtői darab.',
-    'Győr',
-    55000,
-    'https://kockavilag.hu/pics/1637340046_2870399566197d38e130ce_0.jpg'
-  ),
-  (
-    0,
-    1,
-    3,
-    'Kerti Grill',
-    'Faszenes, gurulós kivitel, egyszer használt.',
-    'Budapest',
-    32000,
-    'https://voicesofthevoid.wiki.gg/images/Item_BBQGrill_Ingame_Transparent.png?5732f3'
-  ),
-  (
-    0,
-    2,
-    2,
-    'Bőrdzseki',
-    'Valódi marhabőr, fekete, M-es méret.',
-    'Szeged',
-    45000,
-    'https://img.joomcdn.net/096c4460ff6caea0320cf1be794fbdc62384f5da_1024_1024.jpeg'
-  ),
-  (
-    0,
-    3,
-    4,
-    'Hegyi Kerékpár',
-    '26-os kerekek, Shimano váltó, tárcsafék.',
-    'Miskolc',
-    115000,
-    'https://kreativkocka.cdn.shoprenter.hu/custom/kreativkocka/image/cache/w1600h1100wt1/Parts/4719c02re.png.webp?lastmod=1719499422.1667404517'
-  ),
-  (
-    0,
-    1,
-    1,
-    'Bluetooth Hangszóró',
-    'JBL Charge 5, vízálló, hordozható.',
-    'Budapest',
-    42000,
-    'https://webshop.orion.hu/1672/hordozhato-bluetooth-hangszoro-fm-radioval-opbs-1766.jpg'
-  ),
-  (
-    0,
-    2,
-    5,
-    'Társasjáték Csomag',
-    'Catan és Dixit, újszerű állapotban.',
-    'Székesfehérvár',
-    15000,
-    'https://okosjatek.cdn.shoprenter.hu/custom/okosjatek/image/cache/w900h900wt1q85/product/Szandi/g%C3%A9mklub/dixit/dixit-tarsasjatek.jpg.webp?lastmod=1720423508.1685028474'
-  ),
-  (
-    0,
-    3,
-    3,
-    'Állólámpa',
-    'Modern, szabályozható fényerővel.',
-    'Veszprém',
-    18000,
-    'https://encrypted-tbn0.gstatic.com/shopping?q=tbn:ANd9GcShsodIz-Phx6J9wJRoXigO713oV29oztDqiMMiLK02LgFCVJ7FcrDsm_eaqI_BvKC5Af7TNKdo5pZ7MsiWsJRQlGPKncJv_0l_-PCHILg_tSWWBGylGqRa'
-  ),
-  (
-    0,
-    1,
-    4,
-    'Súlyzó készlet',
-    '2x10 kg, öntöttvas tárcsákkal.',
-    'Budapest',
-    25000,
-    'https://s8.badu.bg/photos/886687/400x400_657b07de29ebc.jpg'
-  ),
-  (
-    0,
-    2,
-    2,
-    'Nike Futócipő',
-    'Air Zoom, 42-es méret, neon zöld.',
-    'Pécs',
-    28500,
-    'https://www.futanet.hu/img/up/pic_15004.jpg'
-  ),
-  (
-    0,
-    0,
-    2,
-    'Tükör (nagy)',
-    'Hatalmas tükör eladó csak kp vagy tesco kupon',
-    'Cserkeszőlő',
-    12000,
-    'https://kep.index.hu/1/0/4266/42667/426677/42667714_fd64f7b5a83c91e219855de9a40aca08_wm.jpg'
-  );
->>>>>>> Stashed changes
 -- --------------------------------------------------------
 --
 -- Tábla szerkezet ehhez a táblához `users`
@@ -251,7 +88,6 @@ CREATE TABLE `users` (
 --
 -- A tábla adatainak kiíratása `users`
 --
-<<<<<<< Updated upstream
 
 INSERT INTO `users` (`userid`, `nev`, `password`, `pfp`) VALUES
 (1, 'Kovács János', 'jelszo123', ''),
@@ -260,12 +96,6 @@ INSERT INTO `users` (`userid`, `nev`, `password`, `pfp`) VALUES
 (4, 'Joember elado', '1234', ''),
 (5, 'hhhghn', 'rtttt', '');
 
-=======
-INSERT INTO `users` (`userid`, `nev`, `password`)
-VALUES (1, 'Kovács János', 'jelszo123'),
-  (2, 'Nagy Anna', 'anna2024'),
-  (3, 'Szabó Péter', 'titkos99');
->>>>>>> Stashed changes
 --
 -- Indexek a kiírt táblákhoz
 --
@@ -273,7 +103,6 @@ VALUES (1, 'Kovács János', 'jelszo123'),
 -- A tábla indexei `kategoria`
 --
 ALTER TABLE `kategoria`
-<<<<<<< Updated upstream
   ADD PRIMARY KEY (`katid`);
 
 --
@@ -291,9 +120,6 @@ ALTER TABLE `users`
 --
 ALTER TABLE `users`
   MODIFY `userid` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
-=======
-ADD PRIMARY KEY (`katid`);
->>>>>>> Stashed changes
 COMMIT;
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */
 ;

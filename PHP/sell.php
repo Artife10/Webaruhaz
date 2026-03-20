@@ -33,11 +33,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             if (move_uploaded_file($_FILES['photos']['tmp_name'][$key], $targetFilePath)) {
                 $feltoltott_db++;
             }
-<<<<<<< Updated upstream
             $sql = "INSERT INTO "
-=======
-
->>>>>>> Stashed changes
 
 
         }

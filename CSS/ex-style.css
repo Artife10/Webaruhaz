@@ -198,11 +198,10 @@ body {
 
 .money{
     text-align: center;
-    width: 70%;
+    width: fit-content;
     height: 100%;
     background-color: rgb(49, 49, 49);
     border-radius: 15px;
-    width: 10%;
     align-self: center;
     padding: 5px;
     height: 50%;
