@@ -76,7 +76,7 @@
                                 <h3>" . $infoItems['hely'] . "</h3>
                                 <h1>" . $infoItems['termeknev'] . "</h1>
                                 <p>" . $infoItems['leiras'] . "</p>
-                                <button class='buy'>500FT</button>
+                                <button class='500FT'>500FT</button>
                               </td>";
                         $i++;
                     }
