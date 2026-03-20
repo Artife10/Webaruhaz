@@ -19,7 +19,7 @@ session_start();
             <?php
             $connection = mysqli_connect("localhost", "root", "", "tradely");
             $userid = $_SESSION['id'];
-            $sql = "SELECT `cred` FROM `users` WHERE `userid` LIKE %$userid%;";
+            $sql = "SELECT `cred` FROM `users` WHERE `userid` LIKE $userid;";
             $result = mysqli_query($connection, $sql);
             echo $result->fetch_assoc()['cred'];
             ?>

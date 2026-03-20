@@ -17,6 +17,9 @@ else {
       if ($result->num_rows > 0) {
         $row = mysqli_fetch_assoc($result); 
         $_SESSION['nev'] = $row['nev'];
+        $sql2 = "SELECT `userid` FROM `users` WHERE `nev` LIKE '%$nev%'";
+        $result = mysqli_query($connection, $sql2);
+        $_SESSION['id'] = $result->fetch_assoc()["userid"];
         header('Location: '."explore.php");
       }
       else {
