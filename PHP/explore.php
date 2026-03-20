@@ -8,7 +8,7 @@
     <link rel="icon" type="image/x-icon" href="../ASSETS/logo.png">
     <title>Tradely</title>
     <style>
-        /* Ez a rész kényszeríti, hogy a szöveg tapadjon a képhez, ha a CSS-ed eltolná */
+        
         .grid td { vertical-align: top; padding: 10px; text-align: center; }
         .grid img { width: 100%; display: block; margin-bottom: 0; }
         .grid h3 { margin: 5px 0 0 0; font-size: 14px; color: #555; }
@@ -70,13 +70,13 @@
                         if ($i % 4 == 0 && $i != 0) {
                             echo "</tr><tr>";
                         }
-                        // Itt a tiszta szerkezet: a kép után azonnal jön a név, margók nélkül
+                        
                         echo "<td>
                                 <img src='" . $infoItems['kep'] . "' alt='termék képe'>
                                 <h3>" . $infoItems['hely'] . "</h3>
                                 <h1>" . $infoItems['termeknev'] . "</h1>
                                 <p>" . $infoItems['leiras'] . "</p>
-                                <button class='buy'>BUY</button>
+                                <button class='buy'>500FT</button>
                               </td>";
                         $i++;
                     }
