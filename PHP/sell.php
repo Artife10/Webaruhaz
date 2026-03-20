@@ -1,5 +1,5 @@
 <?php
-
+/*
 $connection = mysqli_connect("localhost", "root", "", "tradely");
 
 if (!$connection) {
@@ -41,7 +41,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     } else {
         $uzenet = "Hirdetés közzétéve képek nélkül.";
     }
-}
+}*/
 ?>
 
 <!DOCTYPE html>

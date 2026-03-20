@@ -1,6 +1,8 @@
 <!DOCTYPE html>
 <html lang="en">
-
+<?php
+session_start()
+?>
 
 
 <head>
@@ -16,6 +18,17 @@
         <div class="title">
             <img src="../ASSETS/logo.png" alt="" class='logo'>
             <h1>Explore.</h1>
+            <div class="money">
+                <?php
+                    $connection = mysqli_connect("localhost", "root", "", "tradely");
+                    $userid = $_SESSION['id'];
+                    $sql = "SELECT `cred` FROM `users` WHERE `userid` LIKE $userid;";
+                    $result = mysqli_query($connection, $sql);
+                    echo "<h1> +";
+                    echo $result->fetch_assoc()['cred'];
+                    echo "</h1>";
+                ?>
+            </div>
         </div>
         <div class="icons">
             <button><img src="../ASSETS/bell.png" alt="" width="30px" ;></button>
