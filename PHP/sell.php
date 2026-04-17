@@ -15,7 +15,7 @@
     </div>
 
     <?php if ($uzenet): ?>
-        <div class="status-msg"><?php echo $uzenet; ?></div>
+        <div class="status-msg"><?php echo $uzenet; ?></div>s
     <?php endif; ?>
 
     <!-- --- 3. FORM (HTML) --- -->
@@ -28,7 +28,7 @@
             <div class="upload-icon">📸</div>
             <div style="font-weight: bold; font-size: 15px;">Tölts fel képeket</div>
             <p style="color: var(--text-gray); font-size: 12px; margin: 5px 0;">Akár 10 képet is feltölthetsz. Az első a borítókép.</p>
-            <button type="button" class="upload-btn">Upload</button>
+            <button type="button" class="upload-btn">Feltöltés</button>
             <div id="preview-container"></div>
         </div>
 
@@ -80,22 +80,12 @@
     </form>
 </div>
 <div class="menu">
-<<<<<<< HEAD
             <table>
                 <th class="roty"><a href="../PHP/explore.php"><img src="../ASSETS/explore.png" width="40px" height="40px" alt="Felfedezés"></a></th>
                 <th class="roty"><a href="../PHP/sell.php"><img src="../ASSETS/add.png" alt="" width="30px" height="30px"></a></th>
                 <th class="roty"><a href="../PHP/profile.php"><img src="../ASSETS/profile.png" alt="" width="40px" ;></a></th>
             </table>
         </div>
-=======
-    <table>
-        <th class="roty"><a href="../PHP/explore.php"><img src="../ASSETS/explore.png" width="40px" height="40px" alt="Felfedezés"></a></th>
-        <th class="roty"><a href="../PHP/sell.php"><img src="../ASSETS/add.png" alt="" width="30px" height="30px"></a></th>
-        <th class="roty"><a href="../PHP/profile.php"><img src="../ASSETS/profile.png" alt="" width="40px" ;></a></th>
-    </table>
-</div>
-
->>>>>>> 16b0cf67bbf6741da80b080cf2cd4058113db64e
 <script>
 // --- 4. INTERAKCIÓ (JS) ---
 function showPreview(input) {
