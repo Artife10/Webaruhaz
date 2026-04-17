@@ -24,7 +24,7 @@ session_start()
                     $userid = $_SESSION['id'];
                     $sql = "SELECT `cred` FROM `users` WHERE `userid` LIKE $userid;";
                     $result = mysqli_query($connection, $sql);
-                    echo "Tradely    | Credits:" . $result->fetch_assoc()['cred'];
+                    echo "Tradely    | Zsetonok: " . $result->fetch_assoc()['cred'];
                 ?>
                 </div>
             </h1>
