@@ -17,22 +17,19 @@ session_start()
     <div class="navbar">
         <div class="title">
             <img src="../ASSETS/logo.png" alt="" class='logo'>
-            <h1>Explore.</h1>
-            <div class="money">
+            <h1>
+                <div class="mon">
                 <?php
                     $connection = mysqli_connect("localhost", "root", "", "tradely");
                     $userid = $_SESSION['id'];
                     $sql = "SELECT `cred` FROM `users` WHERE `userid` LIKE $userid;";
                     $result = mysqli_query($connection, $sql);
-                    echo "<h1> +";
-                    echo $result->fetch_assoc()['cred'];
-                    echo "</h1>";
+                    echo "Tradely    | Credits:" . $result->fetch_assoc()['cred'];
                 ?>
-            </div>
+                </div>
+            </h1>
         </div>
         <div class="icons">
-            <button><img src="../ASSETS/bell.png" alt="" width="30px" ;></button>
-            <a href="../PHP/profile.php"><button><img src="../ASSETS/profile.png" alt="" width="30px" ;></button></a>
             <a href="../PHP/buy_cred.php"><button><img src="../ASSETS/profile.png" alt="" width="30px" ;></button></a>
         </div>
     </div>

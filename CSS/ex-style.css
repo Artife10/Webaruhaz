@@ -41,17 +41,7 @@ body {
 .icons button:active{
     scale: 0.98;
 }
-.menu{
-    position: fixed;
-    bottom: 0;
-    min-width: 100%;
-    display: flex;
-    background: #143124;
-    height: 80px;
-    justify-content: center;
-    align-items: center;
-    gap: 50px;
-}
+
 .searchbar input{
     height: 40px;
     background: #313a34;
@@ -90,6 +80,17 @@ body {
     align-items: center;
     justify-content: center;
     width: 8%;
+}
+.menu{
+    position: fixed;
+    bottom: 0;
+    min-width: 100%;
+    display: flex;
+    background: #143124;
+    height: 80px;
+    justify-content: center;
+    align-items: center;
+    gap: 50px;
 }
 .menu button{
     border-radius: 300px;
@@ -196,24 +197,10 @@ body {
     width: 100px;
 }
 
-.money{
-    text-align: center;
-    width: fit-content;
-    height: 100%;
-    background-color: rgb(49, 49, 49);
-    border-radius: 15px;
-    align-self: center;
-    padding: 5px;
-    height: 50%;
-    border-style: solid;
-    border-color: gray;
-}
-.money h1{
-    align-self: center;
-    margin: auto;
-    text-align: center;
-}
-
 .roty{
     padding: 20px;
+}
+
+.mon{
+    text-decoration: underline;
 }

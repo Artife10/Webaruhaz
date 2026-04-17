@@ -1,55 +1,3 @@
-<?php
-session_start();
-$connection = mysqli_connect("localhost", "root", "", "tradely");
-
-$uzenet = "";
-$target_dir = "uploads/";
-
-if ($_SERVER["REQUEST_METHOD"] == "POST") {
-
-    $cim = mysqli_real_escape_string($connection, $_POST['title']);
-    $kategoria = mysqli_real_escape_string($connection, $_POST['category']);
-    $ar = mysqli_real_escape_string($connection, $_POST['price']);
-    $leiras = mysqli_real_escape_string($connection, $_POST['description']);
-    $userid = $_SESSION['id'];
-
-    if (!file_exists($target_dir)) {
-        mkdir($target_dir, 0777, true);
-    }
-
-    $feltoltott_db = 0;
-    $elso_kep_utvonal = "";
-
-    if (!empty($_FILES['photos']['name'][0])) {
-
-        foreach ($_FILES['photos']['name'] as $key => $val) {
-
-            $ujNev = time() . "_" . $key . ".png";
-            $targetFilePath = $target_dir . $ujNev;
-
-            if (move_uploaded_file($_FILES['photos']['tmp_name'][$key], $targetFilePath)) {
-
-                if ($feltoltott_db == 0) {
-                    $elso_kep_utvonal = $targetFilePath;
-                }
-
-                $feltoltott_db++;
-            }
-        }
-    }
-
-    // TERMÉK MENTÉSE
-    $sql = "INSERT INTO termek (termeknev, katid, ar, leiras, userid, kep, hely)
-            VALUES ('$cim', '$kategoria', '$ar', '$leiras', '$userid', '$elso_kep_utvonal', 'Szentes')";
-
-    if (mysqli_query($connection, $sql)) {
-        $uzenet = "Sikeresen közzétéve! ($feltoltott_db kép feltöltve)";
-    } else {
-        $uzenet = "Hiba történt: " . mysqli_error($connection);
-    }
-}
-?>
-
 <!DOCTYPE html>
 <html lang="hu">
 <head>
@@ -70,8 +18,10 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         <div class="status-msg"><?php echo $uzenet; ?></div>
     <?php endif; ?>
 
+    <!-- --- 3. FORM (HTML) --- -->
     <form action="" method="POST" enctype="multipart/form-data">
         
+        <!-- Képfeltöltés -->
         <input type="file" name="photos[]" id="fileInput" multiple accept="image/*" style="display: none;" onchange="showPreview(this)">
         
         <div class="upload-section" onclick="document.getElementById('fileInput').click()">
@@ -90,7 +40,18 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         <div class="form-group">
             <label>Kategória</label>
             <select name="category">
-                <?php
+                <option value="">Válassz kategóriát</option>
+                <option value="electronics">Elektronikai termékek</option>
+                <option value="fashion">Divat</option>
+                <option value="home">Otthon és kert</option>
+                  <?php
+                $connection = mysqli_connect("localhost", "root", "", "tradely");
+
+                if (!$connection) {
+                    die("Kapcsolódási hiba: " . mysqli_connect_error());
+                }
+
+
                 $sql = "SELECT * FROM `kategoria`";
                 $result = mysqli_query($connection, $sql);
 
@@ -104,29 +65,42 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         <div class="form-group">
             <label>Ár</label>
             <input type="text" name="price" class="price-input" placeholder="HUF 0.00">
+            <p style="font-size: 11px; color: var(--text-gray); margin-top: 5px;">Tip: hasonló termékek 15.000FT-20.000FT közt mozognak </p>
         </div>
 
         <div class="form-group">
             <label>Description</label>
-            <textarea name="description" rows="4" placeholder="Describe your item..."></textarea>
+            <textarea name="description" rows="4" placeholder="Describe your item's condition, features or reasons for selling..."></textarea>
         </div>
 
         <button type="submit" class="publish-btn">
             <span>⬆️</span> Termék feltöltése
         </button>
+        <br><br><br><br><br>
     </form>
 </div>
 <div class="menu">
+<<<<<<< HEAD
             <table>
                 <th class="roty"><a href="../PHP/explore.php"><img src="../ASSETS/explore.png" width="40px" height="40px" alt="Felfedezés"></a></th>
                 <th class="roty"><a href="../PHP/sell.php"><img src="../ASSETS/add.png" alt="" width="30px" height="30px"></a></th>
                 <th class="roty"><a href="../PHP/profile.php"><img src="../ASSETS/profile.png" alt="" width="40px" ;></a></th>
             </table>
         </div>
+=======
+    <table>
+        <th class="roty"><a href="../PHP/explore.php"><img src="../ASSETS/explore.png" width="40px" height="40px" alt="Felfedezés"></a></th>
+        <th class="roty"><a href="../PHP/sell.php"><img src="../ASSETS/add.png" alt="" width="30px" height="30px"></a></th>
+        <th class="roty"><a href="../PHP/profile.php"><img src="../ASSETS/profile.png" alt="" width="40px" ;></a></th>
+    </table>
+</div>
+
+>>>>>>> 16b0cf67bbf6741da80b080cf2cd4058113db64e
 <script>
+// --- 4. INTERAKCIÓ (JS) ---
 function showPreview(input) {
     const container = document.getElementById('preview-container');
-    container.innerHTML = "";
+    container.innerHTML = ""; // Régi előnézet törlése
     
     if (input.files) {
         Array.from(input.files).forEach(file => {
@@ -146,3 +120,4 @@ function showPreview(input) {
 
 </body>
 </html>
+
