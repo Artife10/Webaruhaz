@@ -16,9 +16,9 @@
                 <th><h1>Tradely</h1></th>
             </tr>    
         </table>
-        <p>Join the community of smart <br> buy and sell used goods <br> with ease.</p>
+        <p>Csatlakozz hozzánk <br> és tedd a vásárlás folyamatát<br> biztonságosabbá!</p>
         
-        <a href="../PHP/register.php"><button class="registerr"><b>Get started</b></button></a>
-        <a href="../PHP/login.php"><button id="grey"><b>Login</b></button></a>
+        <a href="../PHP/register.php"><button class="registerr"><b>Csatlakozom!</b></button></a>
+        <a href="../PHP/login.php"><button id="grey"><b>Bejelentkezés</b></button></a>
 </body>
 </html>
