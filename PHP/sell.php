@@ -55,7 +55,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title> Tradely - List New Item</title>
+    <title> Tradely - Adj el egy terméket</title>
     <link rel="stylesheet" href="../CSS/list.css">
     <link rel="icon" type="image/x-icon" href="../ASSETS/logo.png">
 </head>
@@ -63,7 +63,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
 <div class="container">
     <div class="header">
-        <strong style="font-size: 16px;">List New Item</strong>
+        <strong style="font-size: 16px;">Adj el egy terméket</strong>
     </div>
 
     <?php if ($uzenet): ?>
@@ -76,19 +76,19 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         
         <div class="upload-section" onclick="document.getElementById('fileInput').click()">
             <div class="upload-icon">📸</div>
-            <div style="font-weight: bold; font-size: 15px;">Add Photos</div>
-            <p style="color: var(--text-gray); font-size: 12px; margin: 5px 0;">Up to 10 photos. First one is the cover.</p>
+            <div style="font-weight: bold; font-size: 15px;">Tölts fel képeket</div>
+            <p style="color: var(--text-gray); font-size: 12px; margin: 5px 0;">Akár 10 képet is feltölthetsz. Az első a borítókép.</p>
             <button type="button" class="upload-btn">Upload</button>
             <div id="preview-container"></div>
         </div>
 
         <div class="form-group">
-            <label>Title</label>
-            <input type="text" name="title" placeholder="What are you selling?" required>
+            <label>Termék név</label>
+            <input type="text" name="title" placeholder="Mit szeretnél eladni?" required>
         </div>
 
         <div class="form-group">
-            <label>Category</label>
+            <label>Kategória</label>
             <select name="category">
                 <?php
                 $sql = "SELECT * FROM `kategoria`";
@@ -102,7 +102,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         </div>
 
         <div class="form-group">
-            <label>Price</label>
+            <label>Ár</label>
             <input type="text" name="price" class="price-input" placeholder="HUF 0.00">
         </div>
 
@@ -112,11 +112,17 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         </div>
 
         <button type="submit" class="publish-btn">
-            <span>⬆️</span> Publish Listing
+            <span>⬆️</span> Termék feltöltése
         </button>
     </form>
 </div>
-
+<div class="menu">
+            <table>
+                <th class="roty"><a href="../PHP/explore.php"><img src="../ASSETS/explore.png" width="40px" height="40px" alt="Felfedezés"></a></th>
+                <th class="roty"><a href="../PHP/sell.php"><img src="../ASSETS/add.png" alt="" width="30px" height="30px"></a></th>
+                <th class="roty"><a href="../PHP/profile.php"><img src="../ASSETS/profile.png" alt="" width="40px" ;></a></th>
+            </table>
+        </div>
 <script>
 function showPreview(input) {
     const container = document.getElementById('preview-container');
@@ -135,6 +141,7 @@ function showPreview(input) {
         });
     }
 }
+
 </script>
 
 </body>
