@@ -81,7 +81,6 @@ font-family: system-ui, sans-serif;
     height: 80px;
     justify-content: center;
     align-items: center;
-    gap: 50px;
 }
 .menu button{
     border-radius: 300px;
