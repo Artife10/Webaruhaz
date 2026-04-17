@@ -1,49 +1,3 @@
-<?php
-/*
-$connection = mysqli_connect("localhost", "root", "", "tradely");
-
-if (!$connection) {
-    die("Kapcsolódási hiba: " . mysqli_connect_error());
-}
-
-
-$uzenet = "";
-$target_dir = "uploads/";
-
-if ($_SERVER["REQUEST_METHOD"] == "POST") {
-    // Adatok begyűjtése
-    $cim = $_POST['title'] ?? '';
-    $kategoria = $_POST['category'] ?? '';
-    $ar = $_POST['price'] ?? '';
-    $leiras = $_POST['description'] ?? '';
-
-    // Mappa létrehozása a képeknek
-    if (!file_exists($target_dir)) {
-        mkdir($target_dir, 0777, true);
-    }
-
-    // Képek feltöltése
-    $feltoltott_db = 0;
-    if (!empty($_FILES['photos']['name'][0])) {
-        foreach ($_FILES['photos']['name'] as $key => $val) {
-            $fileName = basename($_FILES['photos']['name'][$key]);
-            $targetFilePath = $target_dir . time() . ".png";
-            $targetpath = "uploads/".time() . ".png";
-            
-            if (move_uploaded_file($_FILES['photos']['tmp_name'][$key], $targetFilePath)) {
-                $feltoltott_db++;
-            }
-            $sql = "INSERT INTO "
-
-
-        }
-        $uzenet = "Sikeresen közzétéve! ($feltoltott_db kép feltöltve)";
-    } else {
-        $uzenet = "Hirdetés közzétéve képek nélkül.";
-    }
-}*/
-?>
-
 <!DOCTYPE html>
 <html lang="hu">
 <head>
@@ -88,16 +42,10 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         <div class="form-group">
             <label>Category</label>
             <select name="category">
-<<<<<<< Updated upstream
-=======
-<<<<<<< HEAD
                 <option value="">Válassz kategóriát</option>
                 <option value="electronics">Elektronikai termékek</option>
                 <option value="fashion">Divat</option>
                 <option value="home">Otthon és kert</option>
-                
-=======
->>>>>>> Stashed changes
                   <?php
                 $connection = mysqli_connect("localhost", "root", "", "tradely");
 
@@ -113,10 +61,6 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                     echo '<option value="' . $row['katid'] . '">' . htmlspecialchars($row['katnev']) . '</option>';
                 }
                 ?>
-<<<<<<< Updated upstream
-=======
->>>>>>> 70507e83dc66d4295e787a318bfad1267f17bb5a
->>>>>>> Stashed changes
             </select>
         </div>
 
