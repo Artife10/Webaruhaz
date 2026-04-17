@@ -10,13 +10,13 @@
 <body>
     <div class="card">
         <div class="register">
-            <h1>Login</h1>
+            <h1>Bejelentkezés</h1>
             <form action="validate.php" method="post">
                 <input type="text" name="nev" id="nev" placeholder="Name"><br><br>
                 <input type="password" name="password" id="password" placeholder="Password"><br>
-                <button>Login</button>
+                <button>Bejelentkezés</button>
             </form>
-            <a href="register.php">I don't have an account</a>
+            <a href="register.php">Nincs fiókom</a>
         </div>
     </div>
 </body>

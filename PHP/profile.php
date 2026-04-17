@@ -23,13 +23,12 @@ session_start();
     </div>
     
     <h1><?php echo htmlspecialchars($_SESSION['nev']); ?></h1>
-    <p>Member since 2026.</p>
     <hr>  
     <form action="update_profile.php" method="POST">
-        <p>Name</p>
-        <input id="input" type="text" name="uj_nev" placeholder="Write your name here" value="<?php echo htmlspecialchars($_SESSION['nev']); ?>" required>     
-        <p>Password</p>
-        <input id="input" type="password" name="uj_passw" placeholder="Leave empty to keep current"><br>
+        <p>Név</p>
+        <input id="input" type="text" name="uj_nev" placeholder="Írd a neved ide" required>     
+        <p>Jelszó</p>
+        <input id="input" type="password" name="uj_passw" placeholder="Hagyd üresen ha nem szeretnél váltani"><br>
         <?php
 
   
@@ -38,12 +37,12 @@ session_start();
   
   $hash = password_hash($plaintext_password, 
           PASSWORD_DEFAULT);
-
-  
-  echo "Generated hash: ".$hash;
 ?>
-        <button type="submit" name="modositas" class="edit-btn">Save Changes</button>
-    </form> 
+        <button type="submit" name="modositas" class="edit-btn">Mentés</button>
+    </form>
+    
+    
+    <button id="grey"><a href="../PHP/logout.php"><b>Kijelentkezés</b></a></button>
 </div>
        <!-- ALSO VALAMI NAVBAR FOOTER-->
 <div class="menu">

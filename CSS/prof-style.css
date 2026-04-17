@@ -100,8 +100,9 @@ font-family: system-ui, sans-serif;
     font-weight: 700;
     height: 45px;
     width: 300px;
-    border: 5px;
+    border: 1px;
     border-radius: 12px;
+    border-style: solid;
     margin: 10px;
     font-size: 15px;
     text-align: center;
@@ -109,4 +110,9 @@ font-family: system-ui, sans-serif;
     background-color: #143124;
     border-color: #D0DAE6;
     color: #D0DAE6;
+
+}
+
+.roty{
+    padding: 20px;
 }
