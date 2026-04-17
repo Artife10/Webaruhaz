@@ -47,10 +47,12 @@ session_start();
 </div>
        <!-- ALSO VALAMI NAVBAR FOOTER-->
 <div class="menu">
-    <a href="../PHP/explore.php"><button><img src="../ASSETS/explore.png" width="40px" height="40px" alt="Felfedezés"></button></a>
-    <a href="../PHP/sell.php"><button><img src="../ASSETS/add.png" alt="" width="30px" height="30px"></button></a>
-    <a href="../PHP/profile.php"><button><img src="../ASSETS/profile.png" alt="" width="40px";></button></a>
-</div>
+            <table>
+                <th class="roty"><a href="../PHP/explore.php"><img src="../ASSETS/explore.png" width="40px" height="40px" alt="Felfedezés"></a></th>
+                <th class="roty"><a href="../PHP/sell.php"><img src="../ASSETS/add.png" alt="" width="30px" height="30px"></a></th>
+                <th class="roty"><a href="../PHP/profile.php"><img src="../ASSETS/profile.png" alt="" width="40px" ;></a></th>
+            </table>
+        </div>
 </body>
 </html>
 
