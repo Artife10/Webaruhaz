@@ -1,6 +1,7 @@
 body {
 margin: 0;
 min-height: 100vh;
+overflow: hidden;
 background: radial-gradient(
 circle at top,
 #1f4d38 0%,
@@ -120,7 +121,9 @@ font-family: system-ui, sans-serif;
     height: 50px;
 }
 .register button{
-    width: 60%;
+    width: 63%;
+    font-size: large;
+
 }
 
 .roty{
