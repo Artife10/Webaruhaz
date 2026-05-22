@@ -38,7 +38,7 @@ session_start();
             ?>
              </h1>
             <input type="number" name="amount" id="amount"><br>
-            <button>BUY</button>
+            <button>Zseton felvétel</button>
         </form>
     </div>
      <div class="menu">

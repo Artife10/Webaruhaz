@@ -69,10 +69,11 @@ session_start()
                 }
 
                 $result = mysqli_query($connection, $sql);
-
+                $i = 0;
+                echo "<tr>";
                 if (mysqli_num_rows($result) > 0) {
-                    $i = 0;
-                    echo "<tr>";
+                    
+                    
                     while ($infoItems = $result->fetch_array()) {
                         if ($i % 4 == 0 && $i != 0) {
                             echo "</tr><tr>";
