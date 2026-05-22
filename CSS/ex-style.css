@@ -137,8 +137,9 @@ body {
 .grid td {
   display: flex;
   flex-direction: column;
-  height: 720px;
+  height: 800px;
   justify-content: space-between;
+  padding: 10px
 }
 
 .grid img {
@@ -161,8 +162,7 @@ body {
   align-items: center;
   justify-content: center;
   text-align: center;
-  padding: 10px;
-  height: auto;
+  padding: 0px;
   border: #00b34a 1px;
   background-color: #2c4d3a;
   border-radius: 12px;
@@ -201,4 +201,8 @@ body {
 
 .mon {
   text-decoration: underline;
+}
+
+.filler{
+  height: 100px;
 }
