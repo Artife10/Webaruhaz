@@ -78,7 +78,7 @@ session_start()
                         if ($i % 4 == 0 && $i != 0) {
                             echo "</tr><tr>";
                         }
-                        echo "<td><div class='gridhead'><img src=" . $infoItems['kep'] . " alt='a fityfenét nem töltött be'><h3><h1>".$infoItems['ar']."</h1>". $infoItems['hely'] . "</h3><h1>" . $infoItems['termeknev'] . "</h1><p>" . $infoItems['leiras'] . "</p><form action='buy.php' method='post'><button type='submit' class='buy' name='buy' value=".$infoItems['termekid'].">BUY</button></form></div></td>";
+                        echo "<td><div class='gridhead'><img src=" . $infoItems['kep'] . " alt='a fityfenét nem töltött be'><h3><h1>".$infoItems['ar']."</h1>". $infoItems['hely'] . "</h3><h1>" . $infoItems['termeknev'] . "</h1><p>" . $infoItems['leiras'] . "</p><form action='buy.php' method='post'><button id='buybutton' type='submit' class='buy' name='buy' value=".$infoItems['termekid'].">BUY</button></form></div></td>";
                         $i++;
                     }
                 }
