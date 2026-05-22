@@ -170,14 +170,14 @@ body {
 
 .buy {
   background: #2bee79;
-  height: auto; /* Fix magasság helyett auto, hogy ne nyúljon túl a szöveg */
-  padding: 15px 30px; /* Belső margó a jobb arányokért */
-  width: 90%; /* 80% helyett 90% szélesség mobilon */
-  max-width: 280px; /* 200px helyett 280px maximális szélesség */
+  height: auto; 
+  padding: 15px 30px; 
+  width: 90%; 
+  max-width: 280px; 
   border: 0;
   border-radius: 12px;
   margin: 15px auto;
-  font-size: 26px; /* Kicsit kisebb betű, hogy biztosan elférjen */
+  font-size: 26px; 
   cursor: pointer;
 }
 
