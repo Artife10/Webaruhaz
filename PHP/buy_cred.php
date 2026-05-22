@@ -21,8 +21,6 @@ session_start();
             <h1>Explore.</h1>
         </div>
         <div class="icons">
-            <button><img src="../ASSETS/bell.png" alt="" width="30px" ;></button>
-            <a href="../PHP/profile.php"><button><img src="../ASSETS/profile.png" alt="" width="30px" ;></button></a>
             <a href="../PHP/buy_cred.php"><button><img src="../ASSETS/profile.png" alt="" width="30px" ;></button></a>
         </div>
     </div>

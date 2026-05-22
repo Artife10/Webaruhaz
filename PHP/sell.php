@@ -14,12 +14,8 @@
         <strong style="font-size: 16px;">Adj el egy terméket</strong>
     </div>
 
-    <?php if ($uzenet): ?>
-        <div class="status-msg"><?php echo $uzenet; ?></div>s
-    <?php endif; ?>
-
     <!-- --- 3. FORM (HTML) --- -->
-    <form action="" method="POST" enctype="multipart/form-data">
+    <form action="sell_item.php" method="POST" enctype="multipart/form-data">
         
         <!-- Képfeltöltés -->
         <input type="file" name="photos[]" id="fileInput" multiple accept="image/*" style="display: none;" onchange="showPreview(this)">
@@ -27,7 +23,7 @@
         <div class="upload-section" onclick="document.getElementById('fileInput').click()">
             <div class="upload-icon">📸</div>
             <div style="font-weight: bold; font-size: 15px;">Tölts fel képeket</div>
-            <p style="color: var(--text-gray); font-size: 12px; margin: 5px 0;">Akár 10 képet is feltölthetsz. Az első a borítókép.</p>
+            <p style="color: var(--text-gray); font-size: 12px; margin: 5px 0;">Tölts fel egy képet!</p>
             <button type="button" class="upload-btn">Feltöltés</button>
             <div id="preview-container"></div>
         </div>
@@ -52,7 +48,7 @@
                 }
 
 
-                $sql = "SELECT * FROM `kategoria`";
+                $sql = "SELECT * FROM `kategoria`;";
                 $result = mysqli_query($connection, $sql);
 
                 while ($row = mysqli_fetch_array($result)) {
