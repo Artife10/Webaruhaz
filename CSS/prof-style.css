@@ -59,7 +59,7 @@ font-family: system-ui, sans-serif;
     align-items: center;
 }
     .icon-badge::after {
-    content: '🏛️'; /* Placeholder for the building icon */
+    content: '🏛️'; 
     font-size: 14px;
 }
 .card button{
